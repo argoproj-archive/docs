@@ -1,0 +1,201 @@
+{
+  "children": [
+    {
+      "title": "Setup and Install Argo",
+      "path": "quickstart/intro_argo_quick_start.md"
+    },
+    {
+      "title": "Tutorials",
+      "path": "yaml/using_the_yaml_dsl.md",
+      "children": [
+        {
+          "title": "Tutorial 1: Create CI Workflow",
+          "path": "yaml/argo_tutorial_1_create_ci_workflow.md"
+        },
+        {
+          "title": "Tutorial 2: Build and Deploy Docker Image using DinD",
+          "path": "yaml/argo_tutorial_2_create_docker_image_build_workflow.md"
+        },
+        {
+          "title": "Tutorial 3: Deploy a Stateless App",
+          "path": "yaml/argo_tutorial_3_deploy_stateless_mlb_app.md"
+        },
+        {
+          "title": "Tutorial 4: Deploy a Stateful App",
+          "path": "yaml/argo_tutorial_4_deploy_stateful_odoo_app_volume.md"
+        },
+        {
+          "title": "Tutorial 5: Deploy Stateful App with AWS RDS",
+          "path": "yaml/argo_tutorial_5_deploy_stateful_odoo_app_rds.md"
+        },
+        {
+          "title": "Tutorial 6: Running Nested Workflows",
+          "path": "yaml/argo_tutorial_6_execute_selenium_tests.md"
+        },
+        {
+          "title": "Tutorial 7: Deploy Microservices-based App",
+          "path": "yaml/argo_tutorial_7_deploy_microservices_sockshop_app.md"
+        }
+      ]
+    },
+    {
+      "title": "User Guide",
+      "path": "a_introduction_topics/overview.md",
+      "children": [
+        {
+          "title": "Configuring Argo",
+          "children": [
+            {
+              "title": "Source Control",
+              "path": "user_guide/configapplatixcluster/connectscm.md"
+            },
+            {
+              "title": "Docker Registry",
+              "path": "user_guide/configapplatixcluster/connectdockerhub-registry.md"
+            },
+            {
+              "title": "Domains",
+              "path": "user_guide/configapplatixcluster/managedomains.md"
+            },
+            {
+              "title": "Single Sign-On",
+              "path": "user_guide/configapplatixcluster/setupsso.md"
+            },
+            {
+              "title": "System Settings",
+              "path": "user_guide/configapplatixcluster/managesystemsettings.md"
+            },
+            {
+              "title": "Users and Permissions",
+              "path": "user_guide/configapplatixcluster/manageuserpermissions.md"
+            },
+            {
+              "title": "Artifact Repository",
+              "path": "user_guide/configapplatixcluster/connectartifactrepo.md"
+            },
+            {
+              "title": "Issue Tracking",
+              "path": "user_guide/configapplatixcluster/connectjira.md"
+            },
+            {
+              "title": "Notifications",
+              "path": "user_guide/configapplatixcluster/setupnotificationmanagement.md"
+            }
+          ]
+        },
+        {
+          "title": "Running Workflows",
+          "children": [
+            {
+              "title": "Creating a Job",
+              "path": "user_guide/timeline/create_job-viewhistory.md"
+            },
+            {
+              "title": "Creating a Policy that Triggers a Workflow",
+              "path": "yaml/ex_create_policy_4_workflow.md"
+            },
+            {
+              "title": "Running Workflows/Apps in Catalog",
+              "path": "user_guide/catalog/deploycatalogapp.md"
+            }
+          ]
+        },
+        {
+          "title": "Deploying Applications",
+          "children": [
+            {
+              "title": "Running Applications and Deployments",
+              "path": "user_guide/applications/applications.md"
+            },
+            {
+              "title": "Running Stateful Applications",
+              "path": "intro-run_stateful_apps_volumes_fixtures.md",
+              "children": [
+                {
+                  "title": "Create Managed Fixtures",
+                  "path": "yaml/ex_create_managed_fixtures.md"
+                },
+                {
+                  "title": "Using Managed Fixtures",
+                  "path": "user_guide/infrastructure/using_fixtures.md"
+                },
+                {
+                  "title": "Adding Volumes for Deployment",
+                  "path": "yaml/ex_add_volume_deployment.md"
+                },
+                {
+                  "title": "Adding an Internal Elastic Load Balancer",
+                  "path": "yaml/ex_adding_a_private_elastic_load_balancer.md"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Monitoring",
+          "path": "intro-monitor_gov_spend.md",
+          "children": [
+            {
+              "title": "Cashboard",
+              "path": "user_guide/dashboards/cashboard.md"
+            },
+            {
+              "title": "Hosts",
+              "path": "user_guide/dashboards/hosts.md"
+            },
+            {
+              "title": "Metrics",
+              "path": "user_guide/dashboards/metrics.md"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "YAML DSL",
+      "path": "yaml/dsl_reference_intro.md",
+      "children": [
+        {
+          "title": "Container Templates",
+          "path": "yaml/container_templates.md"
+        },
+        {
+          "title": "Workflow Template",
+          "path": "yaml/workflow_templates.md"
+        },
+        {
+          "title": "Policy Templates",
+          "path": "yaml/policy_templates.md"
+        },
+        {
+          "title": "Deployment Template",
+          "path": "yaml/deployment_template.md"
+        },
+        {
+          "title": "Fixture Template",
+          "path": "yaml/fixture_template.md"
+        },
+        {
+          "title": "Project Templates",
+          "path": "yaml/project_templates.md"
+        },
+        {
+          "title": "Using Special Values for Parameters",
+          "path": "yaml/special_parameters_values.md"
+        }
+      ]
+    },
+    {
+      "title": "CLI Reference",
+      "path": "cli_reference.md"
+    },
+    {
+      "title": "FAQs",
+      "path": "d_more_information/faqs.md"
+    },
+    {
+      "title": "Release Notes",
+      "path": "releasenotes/release_notes_argo.md"
+    }
+  ]
+}
