@@ -5,7 +5,7 @@ This tutorial shows how to deploy and scale a stateless containerized applicatio
 ## Deploy a Stateless MLB App
 
 1.  Go to [https://github.com/argoproj/appstore](https://github.com/argoproj/appstore) repository and click mlb-db.
-2.  Review the `deploy-mlb-db.yaml` file under `.argo` folder in that repo. This file defines a workflow with four steps: "`checkout`", "`deploy-mongo`", "`insert-data`" and "`deploy-mlb`". Each step is defined as a container or deployment. Each deployment specification internally maps to a Kubernetes deployment and service. For more details on the Argo deployment YAML DSL, see [Deployment Template](#/docs;doc=deployment_template.md). Argo deployment YAMLs internally maps to Kubernetes deployment and service YAMLs.
+2.  Review the `deploy-mlb-db.yaml` file under `.argo` folder in that repo. This file defines a workflow with four steps: "`checkout`", "`deploy-mongo`", "`insert-data`" and "`deploy-mlb`". Each step is defined as a container or deployment. Each deployment specification internally maps to a Kubernetes deployment and service. For more details on the Argo deployment YAML DSL, see [Deployment Template](#/docs;doc=yaml%2Fdeployment_template.md). Argo deployment YAMLs internally maps to Kubernetes deployment and service YAMLs.
 3.  If your deployment spec has an `external_route` key, then that service can be accessed external to the cluster. If it has an `internal_route` key, then it can only be accessed by services within the cluster. In this example, the `mlb` instance has an `external_route` and the `mongo` instance has an `internal_route`
 4.  Since your Argo installation is automatically integrated with [https://github.com/argoproj repo](https://github.com/argoproj repo), you can view this workflow in your Argo Web UI under the Catalog menu.
 5.  Configure the domains for deployment. This allows you to control which applications can access a deployment. From the Argo Web UI, go to Navigation Bar > Settings > Domain Management, make your changes, and click UPDATE DOMAINS.
@@ -35,7 +35,7 @@ You can select any commit, click on "create a new job". Select the workflow name
 
 ### Automatically Trigger Your Workflow
 
-To setup a policy to automatically trigger this workflow then please review the steps for policy creation and the YAML file `example-policy.yaml` from [Tutorial 1: Create CI Workflow](#/docs;doc=argo_tutorial_1_create_ci_workflow.md).
+To setup a policy to automatically trigger this workflow then please review the steps for policy creation and the YAML file `example-policy.yaml` from [Tutorial 1: Create CI Workflow](#/docs;doc=yaml%2Fargo_tutorial_1_create_ci_workflow.md).
 
 In Argo web UI, go to Templates menu and search for that policy and click Enabled.
 
