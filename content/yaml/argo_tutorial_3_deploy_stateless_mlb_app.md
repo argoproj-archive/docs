@@ -2,10 +2,10 @@
 
 This tutorial shows how to deploy and scale a stateless, containerized application called Major League Baseball ("MLB") using Argo on Kubernetes. This stateless application consists of a node.js deployment and a mongodb deployment. These are the steps you'll run to deploy this stateless application:
 
-* Check out source code from your repo
-* Deploy the mongodb container
-* Insert the MLB data into mongodb
-* Deploy the Node.js container with the MLB app
+* Check out code
+* Deploy mongodb container
+* Insert MLB data into mongodb
+* Deploy Node.js container with the MLB app
 
 ## Prerequisites
 This tutorial assumes the following:
@@ -33,12 +33,12 @@ This MLB app deployment workflow uses 2 YAML files from the `.argo` folder in th
 NOTE: The YAML files for an Argo deployment internally map to Kubernetes deployment and services YAML files.
 For more details on writing a deployment file using Argo YAML DSL, see [Deployment Template](#/docs;doc=yaml%deployment_template.md).
 
-## Deploy the Sample Stateless MLB App 
+## Deploy the Sample Stateless MLB App
 
 To deploy the sample MLB app, go to the Argo Web UI and perform these steps:
 
 1.  Configure the domain for your deployment (Navigation Bar > **Settings** > **Domain Management**, *<add-your-domain>*, and click **UPDATE DOMAINS**.
-2.  Go to **Catalog** and select **MLB** and click **Run**. You will see the workflow running in Argo Web UI. You can check logs by clicking on each step. When the workflow completes you will see a `mlb-app` application deployed under Applications tab in the Argo Web UI. You can see it has two deployments `mongo-deploy` and `mlb-deploy` with each deployment running one pod. You can view the app by clicking the `endpoint` in the `mlb-deploy`. 
+2.  Go to **Catalog** and select **MLB** and click **Run**. You will see the workflow running in Argo Web UI. You can check logs by clicking on each step. When the workflow completes you will see a `mlb-app` application deployed under Applications tab in the Argo Web UI. You can see it has two deployments `mongo-deploy` and `mlb-deploy` with each deployment running one pod. You can view the app by clicking the `endpoint` in the `mlb-deploy`.
 3. From the deployment detail page, you can increase the number of instances/pods for each deployment, view the logs, and shell or bash into the container.
 
  ![MLB_deployment](../../images/mlb.png)
@@ -46,8 +46,8 @@ To deploy the sample MLB app, go to the Argo Web UI and perform these steps:
 
 ## Deploy your custom Stateless App
 
-1. In your own repo, create a directory called `.argo`. 
-1. Copy the 2 YAML templates you ran in the sample stateless MLB app (`argo_checkout.yaml` and `mlb.yaml`) from the Appstore  [https://github.com/argoproj/appstore/tree/master/.argo](https://github.com/argoproj/appstore/tree/master/.argo) to your `.argo` folder 
+1. In your own repo, create a directory called `.argo`.
+1. Copy the 2 YAML templates you ran in the sample stateless MLB app (`argo_checkout.yaml` and `mlb.yaml`) from the Appstore  [https://github.com/argoproj/appstore/tree/master/.argo](https://github.com/argoproj/appstore/tree/master/.argo) to your `.argo` folder
 2. Customize the `mlb.yaml` file with your deployment and container specifications.
 
 ### Running Your Deployment Workflow
@@ -55,7 +55,7 @@ To deploy the sample MLB app, go to the Argo Web UI and perform these steps:
 When you integrate your repo with Argo, the Argo Web UI displays your source code commits in the **Timeline** menu item.
 
 You have two options for running your customized CI workflow:
- 
+
  * **Manually**
 	1. Go to **Timeline** menu, select a commit and click **Create a New Job**.
 	1. Select the CI workflow name, enter values for the input parameters and click **Submit**.  
