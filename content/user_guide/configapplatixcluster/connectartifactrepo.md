@@ -13,7 +13,7 @@ Argo makes it easy to integrate external artifact repositories. This is useful i
 5.  (Optional) Click **TEST** to check the connection before you integrate Argo to the repository.
 6.  Click **CONNECT**.
 
-To disconnect a repository, click ![](../docs/images/pencil_4_editing.png)and click **DISCONNECT**.
+To disconnect a repository, click ![](../../../images/pencil_4_editing.png)and click **DISCONNECT**.
 
 # Managing Artifact Retention Policy
 

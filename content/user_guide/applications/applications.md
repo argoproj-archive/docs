@@ -14,9 +14,9 @@ To illustrate these concepts, the following diagram shows an application consist
 *   The web server deployment has 2 instances running
 *   The database server deployment has 1 instance running
 
-![](../docs/images/applications_deployments_volume_diagram_argo.png)
+![](../../../images/applications_deployments_volume_diagram_argo.png)
 
-![](../docs/images/applications_deployments_volume_diagram_1000x615.png)
+![](../../../images/applications_deployments_volume_diagram_1000x615.png)
 
 From the Applications tab, you can view all applications that are available for deployment on your Argo.
 
@@ -119,8 +119,8 @@ inputs:
 
 2.  Choose one of these options:
 
-    1.  To perform a rolling update to the **latest commit** of your application, click ![](../docs/images/clear_3_dots_23x23.png) for the deployment you want and click Redeploy.
-    2.  To perform a rolling update to roll back to a **specific revision** of your application, click the specific deployment. Then click ![](../docs/images/clear_3_dots_23x23.png) for the revision you want and select Rollback.
+    1.  To perform a rolling update to the **latest commit** of your application, click ![](../../../images/clear_3_dots_23x23.png) for the deployment you want and click Redeploy.
+    2.  To perform a rolling update to roll back to a **specific revision** of your application, click the specific deployment. Then click ![](../../../images/clear_3_dots_23x23.png) for the revision you want and select Rollback.
 3.  Enter the input parameters that your workflow requires and click Submit to launch the rolling update.
 
     The job (aka workflow) is launched to perform the rolling update to either the most recent commit or a past deployment.
