@@ -41,7 +41,7 @@ You can see the workflow status in the Argo Web UI. You can also check the logs 
 1. Copy the YAML templates you ran in the sample CI workflow from [https://github.com/argoproj/ci-workflow/.argo](https://github.com/argoproj/ci-workflow/tree/master/.argo) to the `.argo` folder you just created in your repo.
 1. Customize the `example-workflow-approval.yaml` file by writing your own build, test, and release containers.
 	
-	For more details about writing the YAML DSL see [Argo YAML DSL Reference](#/docs;doc=yaml%2Fdsl_reference_intro.md).
+	For more details about writing the YAML DSL see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
 ## Run Your Custom CI Workflow
 

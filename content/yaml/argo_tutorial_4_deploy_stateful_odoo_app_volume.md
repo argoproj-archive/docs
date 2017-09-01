@@ -40,7 +40,7 @@ If you start or stop the application, you can see that the data is persisted.
 1. Copy the YAML templates you ran in the sample workflow for deploying stateless app from [https://github.com/argoproj/odoo-app/,argo](https://github.com/argoproj/odoo-app/,argo) to the `.argo` folder you just created in your repo.
 1. Customize the `odoo-with-vol.yaml` file by writing your own deployment specification or adding more steps.
 
-	For more details about writing the YAML DSL, see [Argo YAML DSL Reference](#/docs;doc=yaml%2Fdsl_reference_intro.md).
+	For more details about writing the YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
 4.  (Optional) Modify the `odoo-project.yaml` file to give users the option to run the project from the Catalog menu. If you do not want to provide this option, then users can run the workflow against your commits displayed in the **Timelines** menu. You can also run all your YAML templates from the **Templates** menu.
 
