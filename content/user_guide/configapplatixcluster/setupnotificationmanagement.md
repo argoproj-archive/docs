@@ -54,7 +54,7 @@ You can enable a policy to automatically run workflows. When you create a policy
 
 Just click the name of the policy to see the specific policy details, including **NOTIFICATION** details.
 
-For instructions on how to define a policy, see [Automating Workflows Using Policies](#/docs;doc=%2F..%2Fyaml%2Fex_create_policy_4_workflow.md).
+For instructions on how to define a policy, see [Automating Workflows Using Policies](./../../yaml/ex_create_policy_4_workflow.md).
 
 Additionally, you can also write a policy that alerts users as to when certain events happen on the Argo.
 

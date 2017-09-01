@@ -20,7 +20,7 @@ Here's the procedure:
 
 NOTE: If you have already run a job from a specific commit, you can run the same job again without having to select the commit.
 
-*   [Monitor the progress of your job from the Timeline](#/docs;doc=jobs_notused.md)
+*   [Monitor the progress of your job from the Timeline](./../../jobs_notused.md)
 
 View the available YAML templates for running a job
 

@@ -48,7 +48,7 @@ When the workflow completes, click **Timeline** > **Jobs** you'll see a "Success
 1. Copy the YAML templates you ran in the sample workflow for building and deploying Docker images from [https://github.com/argoproj/example-dind/tree/master/.argo](https://github.com/argoproj/example-dind/tree/master/.argo) to the `.argo` folder you just created in your repo.
 1. Customize the `dind-workflow.yaml` file by writing your own build container or adding more steps.
 
-	For more details about writing the YAML DSL, see [Argo YAML DSL Reference](#/docs;doc=yaml%2Fdsl_reference_intro.md).
+	For more details about writing the YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
 4.  (Optional) Modify the `dind-project.yaml` file to give users the option to run the project from the Catalog menu. If you do not want to provide this option, then users can run the workflow against your commits displayed in the **Timelines** menu. You can also run all your YAML templates from the **Templates** menu.
 

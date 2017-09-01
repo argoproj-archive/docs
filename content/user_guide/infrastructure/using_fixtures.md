@@ -6,7 +6,7 @@ The process for using fixtures in a workflow or app is
 
 1.  From the Argo Web UI, connect to the repo containing the fixture class you already defined as a YAML template.
 
-    NOTE: Before you start using fixtures, make sure you have already created a YAML template for the fixture class and referenced it in the appropriate workflow and container templates. For details about the YAML template, see [Creating a Managed Fixture for Workflows and Apps](#/docs;doc=%2F..%2Fyaml%2Fex_create_managed_fixtures.md)..
+    NOTE: Before you start using fixtures, make sure you have already created a YAML template for the fixture class and referenced it in the appropriate workflow and container templates. For details about the YAML template, see [Creating a Managed Fixture for Workflows and Apps](./../../yaml/ex_create_managed_fixtures.md)..
 
 2.  Go to Infrastructure > Fixture and add the fixture class you want to use and select the repo branch if you have multiple branches that contain this fixture class definition. See [To add a new fixture class to your repo branch](#AddFixtureClass2Repo)
 3.  Create an instance of the fixture class. For more details, see [To create an instance of a fixture class](#CreateInstanceFixtureClass).
