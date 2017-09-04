@@ -1,0 +1,47 @@
+---
+type: container
+version: 1
+name: validate
+resources:
+  mem_mib: 2048
+  cpu_cores: 0.4
+image: node:6.3.1
+command: ["sh", "-c"]
+args: ["cd /src && npm install && node scripts/find-broken-links.js"]
+inputs:
+  artifacts:
+    CODE:
+      path: "/src"
+
+---
+type: workflow
+version: 1
+name: validate-docs
+inputs:
+  parameters:
+    COMMIT:
+      default: "%%session.commit%%"
+    REPO:
+      default: "%%session.repo%%"
+steps:
+- CHECKOUT:
+    template: argo-checkout
+- VALIDATE:
+    template: validate
+    arguments:
+      artifacts.CODE: "%%steps.CHECKOUT.outputs.artifacts.CODE%%"
+
+
+---
+type: policy
+version: 1
+name: validate-docs-policy
+template: validate-docs
+notifications:
+- when:
+  - on_failure
+  whom:
+  - committer
+  - author
+when:
+- event: on_push

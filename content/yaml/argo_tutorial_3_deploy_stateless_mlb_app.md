@@ -31,7 +31,7 @@ This MLB app deployment workflow uses 2 YAML files from the `.argo` folder in th
 	- `mongo-deploy` deployment has an `internal_route`. This means that the mongodb deployment can only be accessed by services within the K8s cluster.
 
 NOTE: The YAML files for an Argo deployment internally map to Kubernetes deployment and services YAML files.
-For more details on writing a deployment file using Argo YAML DSL, see [Deployment Template](yaml%deployment_template.md).
+For more details on writing a deployment file using Argo YAML DSL, see [Deployment Template](../yaml/deployment_template.md).
 
 ## Deploy the Sample Stateless MLB App
 
