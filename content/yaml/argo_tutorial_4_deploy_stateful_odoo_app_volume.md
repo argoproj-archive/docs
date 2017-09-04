@@ -12,7 +12,7 @@ These are the steps you'll run in this workflow for deploying the containerized,
 ## Prerequisites
 This tutorial assumes the following:
 
-* You have successfully [installed Argo](https://argoproj.github.io/argo-site/#/get-started/installation).
+* You have successfully [installed Argo](https://argoproj.github.io/argo-site/get-started/installation).
 * You have integrated Argo with the sample Odoo repo at [https://github.com/argoproj/odoo-app](https://github.com/argoproj/odoo-app).
 
 ## About the YAML files

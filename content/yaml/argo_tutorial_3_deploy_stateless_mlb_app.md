@@ -10,7 +10,7 @@ This tutorial shows how to deploy and scale a stateless, containerized applicati
 ## Prerequisites
 This tutorial assumes the following:
 
-* You have successfully [installed Argo](https://argoproj.github.io/argo-site/#/get-started/installation).
+* You have successfully [installed Argo](https://argoproj.github.io/argo-site/get-started/installation).
 * You have integrated Argo with the sample MLB repo at [https://github.com/argoproj/appstore](https://github.com/argoproj/appstore).
 
 ## About the YAML files
