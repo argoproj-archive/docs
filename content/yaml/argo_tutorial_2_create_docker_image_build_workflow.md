@@ -12,6 +12,10 @@ NOTE: Argo uses the Docker-in-Docker (DinD) technique to build a Docker image wi
 ## Prerequisites
 This tutorial assumes the following:
 
+
+* You have successfully [installed Argo](https://argoproj.github.io/argo-site/get-started/installation).
+* You have integrated Argo with the sample DinD repo at [https://github.com/argoproj/example-dind](https://github.com/argoproj/example-dind).
+
 ## About the YAML Templates
 
 The DinD workflow uses 2 YAML files from the repo at [https://github.com/argoproj/example-dind/tree/master/.argo](https://github.com/argoproj/example-dind/tree/master/.argo):
