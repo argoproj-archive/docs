@@ -30,3 +30,10 @@ You'll also see that the application has one deployment: **odoo-deploy** which i
 ![]() NEED to get screenshot of odoo-rds-with-vols!!!! NEED to do CLI installation on MAC
 
 4.  Click `odoo-deploy`. From this view, you can easily increase the number of pods, view the logs and access the endpoint so you can sh/bash into the container for the app itself (right-click on the pod and select **Console**).
+
+## Customize Your YAML Files
+
+1.  Create an `.argo` folder under your repository.
+2.  Copy `odoo-with-rds.yaml` from [https://github.com/argoproj/odoo-app](https://github.com/argoproj/odoo-app) to your `.argo` folder. Customize it with your deployment and container specs.
+3.  Create an EBS volume called "`odoo`" volume using the [YAML templates for Volumes](./../ex_add_volume_deployment.md) or the Argo Web UI (**Navigation Bar** > **Infrastructure** > **Volumes** and
+4.  (Optional) If you want the application to show up in your Catalog, .the file `odoo-project.yaml` specifies this. You can also run all your YAML-based workflows from the Templates menu in the Argo Web UI.
