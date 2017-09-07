@@ -1,8 +1,8 @@
 # Tutorial 4: Deploy a Stateful App
 
-This tutorial shows how to deploy and scale a stateful, containerized application named Odoo ([https://www.odoo.com](https://www.odoo.com/)). Odoo is an open source, two-tiered, ERP and CRM app that has an app server and a PostgreSQL database.
+This tutorial shows how to deploy and scale a stateful, containerized application named Odoo ([https://www.odoo.com](https://www.odoo.com/)) that uses volumes. Odoo is an open source, two-tiered, ERP and CRM app that has an app server and a PostgreSQL database.
 
-This tutorial also uses two AWS EBS volumes to persist data: One volume for persisting the app server files and another volume for persisting the PostgreSQL database.    
+This tutorial uses two AWS EBS volumes to persist data: One volume for persisting the app server files and another volume for persisting the PostgreSQL database.    
 
 These are the steps you'll run in this workflow for deploying the containerized, stateful app that uses volumes:
 
@@ -17,7 +17,7 @@ This tutorial assumes the following:
 
 ## About the YAML files
 
-This stateful app deployment with volumes uses 1 YAML file from the `.argo` folder in the  sample Odoo repo:
+This stateful app deployment with volumes uses one YAML file from the `.argo` folder in the  sample Odoo repo:
 
 * `odoo-with-vol.yaml` - defines a workflow with two steps: "`deploy-postgres`" and "`deploy-odoo`". Each step is specified as a deployment. Argo deployment YAMLs internally map to Kubernetes deployment and service YAMLs. For more details on the Argo YAML DSL, see [Argo YAML DSL Reference](../yaml/dsl_reference_intro.md).
 
@@ -28,8 +28,10 @@ This stateful app deployment with volumes uses 1 YAML file from the `.argo` fold
 ## Deploy and Scale Odoo App
 
 1. Configure the domains for deployment. This allows you to control which applications can access a deployment. From the Argo Web UI, click **Navigation Bar** > **Settings** > **Domain Management**, make your changes, and click **UPDATE DOMAINS**.
-2. From **Catalog**, click **>** to select **Odoo App**, and click **Deploy Odoo With Volumes**. Keep the default input parameters. Make sure the volume input parameters are defined as above. Click **Submit**. You will see the workflow running in Argo web UI.
+2. From **Catalog**, click **>** to select **Odoo App**, and click **Deploy Odoo With Volumes**. Keep the default input parameters. Make sure the volume input parameters are defined as above. Click **Submit**. You will see the workflow running in Argo Web UI.
 3. When the workflow completes, go to **Applications** tab. You'll see a new application named **odoo-with-vols** that has been deployed.
+
+ ![odoo-with-vols](../../images/deployed_odoo_app_with_volumes_instances.png)
 You can also see that the application has two deployments: **odoo-deploy** and **postgres-deploy** with each deployment running in its own pod.
 4.  Click `odoo-deploy`. From this view, you can easily increase the number of pods, view the logs and access the endpoint so you can sh/bash into the container for the app itself.
 If you start or stop the application, you can see that the data is persisted.
