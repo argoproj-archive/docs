@@ -9,16 +9,16 @@ The only step you'll run in this tutorial is to deploy odoo.
 This tutorial assumes the following:
 
 * You have successfully [installed Argo](https://argoproj.github.io/argo-site/get-started/installation).
-* You have integrated Argo with the sample odoo repo at [https://github.com/argoproj/ci-workflow](https://github.com/argoproj/ci-workflow)
+* You have integrated Argo with the sample odoo repo at [https://github.com/argoproj/odoo-app](https://github.com/argoproj/odoo-app)
 * You have [created an AWS RDS database instance of type "PostgreSQL"](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html). Make sure you've taken all default parameters and that Argo can access the database endpoint.
 
 ## About the YAML Files
 
-This stateful app deployment with AWS RDS uses the following YAML file from the repo at  [https://github.com/argoproj/odoo-app](https://github.com/argoproj/odoo-app/.argo):
+This stateful app deployment with AWS RDS uses the following YAML file in the `.argo` directory from the repo at  [https://github.com/argoproj/odoo-app](https://github.com/argoproj/odoo-app):
 
 * ` odoo-with-rds.yaml` - defines a workflow with one step - "`deploy-odoo`" which is of type `deployment`. This step deploys the Odoo app server. Argo deployment YAMLs internally maps to Kubernetes deployment and service YAMLs. For more details on the Argo YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
-Because the deployment needs to persist data, you must first create a volume to store the data. The ` odoo-with-rds.yaml` file already specifies a named volume `odoo-rds`. For further details about specifying volumes for a deployment, see [Adding a Volume as Storage for Deployment](#/docs;doc=yaml%2Fex_add_volume_deployment.md).
+Because the deployment needs to persist data, you must first create a volume to store the data. The ` odoo-with-rds.yaml` file already specifies a named volume `odoo-rds`. For further details about specifying volumes for a deployment, see [Adding a Volume as Storage for Deployment](./ex_add_volume_deployment.md).
 
 NOTE: You can also create named volumes from the Argo Web UI. Go to **Navigation Bar** > **Infrastructure** > **Volumes** and create two EBS volumes called "`odoo`" and "`postgres`" of 1 GB size each.
 
