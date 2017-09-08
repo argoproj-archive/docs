@@ -27,22 +27,26 @@ NOTE: You can also create named volumes from the Argo Web UI. Go to **Navigation
 1. Configure the domains for deployment. This allows you to control which applications can access a deployment. From the Argo Web UI, click **Navigation Bar** > **Settings** > **Domain Management**, make your changes, and click **UPDATE DOMAINS**.
 2. From **Catalog**, click **>** to select **Odoo App**, and click **Deploy Odoo with RDS**. Keep the default input parameters. Make sure the volume input parameters are defined as above. For the `DBHost` parameter, enter your RDS endpoint (which is a URL that AWS provides). You don't have to enter port number 5432. Click **Submit**. You will see the workflow running in Argo Web UI.
 3. When the workflow completes, go to **Applications** tab. You'll see a new application named **odoo-rds-with-vols** that has been deployed.
-You'll also see that the application has one deployment: **odoo-deploy** which is running in its own pod/instance. (odoo-deploy-xxxxxxxxxx-xxxxx).
 
-![]() NEED to get screenshot of odoo-rds-with-vols!!!! NEED to do CLI installation on MAC
+  ![](./../../images/application_odoo-rds-with-vols_screen2.png)
 
-4.  Click `odoo-deploy`. From this view, you can easily increase the number of pods, view the logs and access the endpoint so you can sh/bash into the container for the app itself (right-click on the pod and select **Console**).
+ You'll also see that the application has one deployment: **odoo-deploy** which is running in its own pod/instance (which has an identifier such as "odoo-deploy-xxxxxxxxxx-xxxxx").
+4. Click **ENDPOINT** to access the Odoo app.
+
+   NOTE: If you want to sh/bash into the container for the app, click ![](./../../images/3_vertical_dots_25x26_GREEN.png) on the pod named "odoo-deploy-xxxxxxxxxx-xxxxx" and select **Console**.
+
+4.  Click `odoo-deploy`. From this view, you can easily increase the number of pods and view the logs.
 
 ## Customize Your YAML Files
 
 1.  Create an `.argo` folder under your repository.
 2.  Copy `odoo-with-rds.yaml` from [https://github.com/argoproj/odoo-app](https://github.com/argoproj/odoo-app) to your `.argo` folder. Customize it with your deployment and container specs.
-3.  Create an EBS volume called "`odoo`" volume using the [YAML templates for Volumes](./ex_add_volume_deployment.md) or the Argo Web UI (**Navigation Bar** > **Infrastructure** > **Volumes** > **+** and select a type of  named volume.
-4.  (Optional) If you want the application to show up in your Catalog, .the file `odoo-project.yaml` specifies this. You can also run all your YAML-based workflows from the Templates menu in the Argo Web UI.
+3.  Create an EBS volume called "`odoo`" using the [YAML templates for Volumes](./ex_add_volume_deployment.md) or the Argo Web UI (**Navigation Bar** > **Infrastructure** > **Volumes** > **+** and select a type of  named volume.
+4.  (Optional) If you want the application to show up in your Catalog, .the file `odoo-project.yaml` specifies this. You can also run all your YAML-based workflows from the **Templates** menu in the Argo Web UI.
 
 ## Running Your Deployment Workflow
 
-When you integrate your repo with Argo, the Argo Web UI displays your source code commits in the **Timeline** menu item.
+When you integrate your repo with Argo, the Argo Web UI displays your source code commits in the **Timeline** menu.
 
 You have two options for running your customized CI workflow:
 
