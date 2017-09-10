@@ -39,10 +39,44 @@ glob.sync(__dirname + '/../content/**/*.md').forEach(filePath => {
     }
 });
 
+let valid = true;
 let files = Object.keys(invalidLinks);
-files.forEach(file => {
-    console.error(`${file}:`);
-    invalidLinks[file].forEach(link => console.error('\t' + link));
-    console.error('');
-});
-process.exit(files.length > 0 ? -1 : 0);
+if (files.length > 0) {
+    valid = false;
+    console.info('Invalid links found in markdown files:\n');
+    files.forEach(file => {
+        console.info(`${file}:`);
+        invalidLinks[file].forEach(link => console.info('\t' + link));
+        console.info('');
+    });
+}
+
+let toc = null;
+try {
+    toc = require('../content/structure');
+} catch (e) {
+    valid = false;
+    console.info('Unable to parse table of content', e);
+}
+
+let invalidTocLinks = [];
+if (toc) {
+    let docs = [toc];
+    while (docs.length > 0) {
+        let next = docs.pop();
+        if (next.path) {
+            if (!fs.existsSync(path.join(__dirname, '..', 'content', next.path))) {
+                invalidTocLinks.push(next.path);
+            }
+        }
+        docs = docs.concat(next.children || []);
+    }
+}
+
+if (invalidTocLinks.length > 0) {
+    valid = false;
+    console.info('Invalid links found in table of content:\n');
+    invalidTocLinks.forEach(link => console.info('\t' + link));
+}
+
+process.exit(valid ? 0 : -1);
