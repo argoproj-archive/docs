@@ -248,4 +248,4 @@ XLARGE</p>
 
  To view your resource limits, click the **Limits** tab on your AWS EC2 page.
 
- ![AWS_Limits_page](./../images/check_your_amazon_resources_380x232.png)
+ ![AWS_Limits_page](./../../images/check_your_amazon_resources_380x232.png)
