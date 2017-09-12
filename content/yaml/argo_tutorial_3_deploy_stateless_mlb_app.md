@@ -49,12 +49,12 @@ To deploy the sample MLB app, go to the Argo Web UI and perform these steps:
 1. In your own repo, create a directory called `.argo`.
 1. Copy the 2 YAML templates you ran in the sample stateless MLB app (`argo_checkout.yaml` and `mlb.yaml`) from the Appstore  [https://github.com/argoproj/appstore/tree/master/.argo](https://github.com/argoproj/appstore/tree/master/.argo) to your `.argo` folder
 2. Customize the `mlb.yaml` file with your deployment and container specifications.
+3. 	Integrate your repo with Argo. In Argo Web UI, select **Administration->Integrations->SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
 
 ## Running Your Deployment Workflow
 
-When you integrate your repo with Argo, the Argo Web UI displays your source code commits in the **Timeline** menu item.
 
-You have two options for running your customized CI workflow:
+You have two options for running your customized deployment workflow:
 
  * **Manually**
 	1. Go to **Timeline** menu, select a commit and click **Create a New Job**.
@@ -63,7 +63,7 @@ You have two options for running your customized CI workflow:
    (Optional)  If you want your stateless app to display in your Catalog menu, just modify the `Project` section in the `mlb.yaml` YAML template.
 
 * **Automatically**
-  1. Add `commit` and `repo` as input parameters to your workflow as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
+ 
   2. Create and activate a Policy template to trigger this workflow for every commit as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
 
    After you've completed these steps, every time you make a commit in your repo, the deployment workflow is automatically triggered.   

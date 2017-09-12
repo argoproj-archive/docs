@@ -43,11 +43,10 @@ If you start or stop the application, you can see that the data is persisted.
 
 	For more details about writing the YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
-4.  (Optional) Modify the `odoo-project.yaml` file to give users the option to run the app from the Catalog menu. If you do not want to provide this option, then users can run the workflow against your YAML template from the **Templates** menu.
+4. Integrate your repo with Argo. In Argo Web UI, select **Administration->Integrations->SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
 
 ## Running Your Deployment Workflow
 
-When you integrate your repo with Argo, the Argo Web UI displays your source code commits in the **Timeline** menu item.
 
 You have two options for deploying your stateful app:
 

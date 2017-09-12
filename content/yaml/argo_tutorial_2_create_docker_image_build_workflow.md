@@ -49,9 +49,7 @@ You can see the workflow status from the Argo Web UI. You can also check the log
 
 	For more details about writing the YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
-4.  (Optional) Modify the `dind-project.yaml` file to give users the option to run the project from the Catalog menu. If you do not want to provide this option, then users can run the workflow against your commits displayed in the **Timelines** menu. You can also run all your YAML templates from the **Templates** menu.
-
-When you integrate your repo with Argo, the Argo Web UI will display your source code commits in the **Timeline** menu item.
+4.  Integrate your repo with Argo. In Argo Web UI, select **Administration->Integrations->SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
 
 ## Running Your Customized DinD Build Workflow
 
@@ -60,7 +58,8 @@ You have two options for running your customized DinD build workflow:
  * **Manually**
 
 	1. Go to **Timeline** menu, select a commit and click **Create a New Job**.
-	1. Select the YAML templates to create a job, click **NEXT**, enter values for the input parameters and click **Submit**.  
+	1. Select the YAML templates to create a job, click **NEXT**, enter values for the input parameters and click **Submit**. You can also run all your YAML templates from the **Templates** menu.
+
 <br/>
    (Optional) If you want your DinD-build Workflow to show up in your Catalog menu, copy and modify the `dind-project.yaml` file into the `.argo` directory in your repo.
 

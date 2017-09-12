@@ -39,12 +39,11 @@ You can see the workflow status in the Argo Web UI. You can also check the logs 
 1. In your own repo, create a directory called `.argo`. (The Argo Workflow engine uses this directory to look for the YAML files to run for a containerized workflow.)
 1. Copy the YAML templates you ran in the sample CI workflow from [https://github.com/argoproj/ci-workflow/.argo](https://github.com/argoproj/ci-workflow/tree/master/.argo) to the `.argo` folder you just created in your repo.
 1. Customize the `example-workflow-approval.yaml` file by writing your own build, test, and release containers.
-
 	For more details about writing the YAML DSL see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
+1. 	Integrate your repo with Argo. In Argo Web UI, select **Administration->Integrations->SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
+
 
 ## Run Your Custom CI Workflow
-
-When you integrate your repo with Argo, the Argo Web UI will display your source code commits in the **Timeline** menu item.
 
 
  You have two options for running your customized CI workflow:

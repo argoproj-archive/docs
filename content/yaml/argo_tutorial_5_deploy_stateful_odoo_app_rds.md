@@ -39,11 +39,10 @@ In this tutorial, ` odoo-with-rds.yaml` file refers to a named volume `odoo-rds`
 1.  Create a `.argo` folder under your repository.
 2.  Copy `odoo-with-rds.yaml` from [https://github.com/argoproj/odoo-app](https://github.com/argoproj/odoo-app) to your `.argo` folder. Customize it with your deployment and container specs.
 3.  Create an EBS volume called "`odoo`" using the [YAML templates for Volumes](./ex_add_volume_deployment.md) or the Argo Web UI (**Navigation Bar** > **Infrastructure** > **Volumes** > **+** and select a type of  named volume.
-4.  (Optional) Modify the `odoo-project.yaml` file to give users the option to run the app from the Catalog menu. If you do not want to provide this option, then users can run the workflow against your YAML template from the **Templates** menu.
+4.  	Integrate your repo with Argo. In Argo Web UI, select **Administration->Integrations->SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
 
 ## Running Your Deployment Workflow
 
-When you integrate your repo with Argo, the Argo Web UI displays your source code commits in the **Timeline** menu.
 
 You have two options for running your customized CI workflow:
 
