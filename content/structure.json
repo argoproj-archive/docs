@@ -159,30 +159,44 @@
       "children": [
         {
           "title": "Container Templates",
+          "summary": "",
+          "details": "",
           "path": "yaml/container_templates.md"
         },
         {
           "title": "Workflow Template",
+          "summary": "",
+          "details": "",
           "path": "yaml/workflow_templates.md"
         },
         {
           "title": "Policy Templates",
+          "summary": "",
+          "details": "",
           "path": "yaml/policy_templates.md"
         },
         {
           "title": "Deployment Template",
+          "summary": "",
+          "details": "",
           "path": "yaml/deployment_template.md"
         },
         {
           "title": "Fixture Template",
+          "summary": "",
+          "details": "",
           "path": "yaml/fixture_template.md"
         },
         {
           "title": "Project Templates",
+          "summary": "",
+          "details": "",
           "path": "yaml/project_templates.md"
         },
         {
           "title": "Using Special Values for Parameters",
+          "summary": "",
+          "details": "",
           "path": "yaml/special_parameters_values.md"
         }
       ]
