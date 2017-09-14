@@ -24,7 +24,7 @@ Administrators can configure the notification rules as to who receives certain t
 
 ## To configure a new notification rule for users:
 
-1.  Click Configurations > Notification Management.
+1.  Click **Configurations** > **Notification Management**.
 
 2.  Click **+**.
 
@@ -62,8 +62,8 @@ Additionally, you can also write a policy that alerts users as to when certain e
 
 Choose the system for sending out notification messages to your users:
 
-*   SMTP - Enter the configuration information for your server.
-*   Slack - To enable Slack with Argo, you must configure both systems to communicate with each other.
+*   **SMTP** - Enter the configuration information for your server.
+*   **Slack** - To enable Slack with Argo, you must configure both systems to communicate with each other.
 
 ## SMTP
 

@@ -33,6 +33,7 @@ NOTE: To make the credentials secure for accessing the container registry, this 
 
 ## Run a DinD Build Workflow
 
+### From Argo Web UI
 1. In the Argo Web UI, select **Catalog** > **Demo** > **Docker in Docker** and click **Build using DinD**.
 1. Click **Submit** to start the DinD build workflow.
 
@@ -40,6 +41,19 @@ You can see the workflow status from the Argo Web UI. You can also check the log
 
 ![DinD-workflow](../../images/example-dind-workflow.png)
 
+### From Argo CLI:
+
+Run the CI workflow:
+
+```~/argo job submit example-build-using-dind --argument "parameters.COMMIT=<commit_ID>" --argument "parameters.REPO=https://github.com/argoproj/example-dind.git"  --repo https://github.com/argoproj/example-dind.git```
+
+Get the job ID of the running job:
+
+```$ ~/argo job list```
+
+Get the status of a job:
+
+```$ ~/argo job show <job_ID>```
 
 ## Customize Your DinD Build Workflow
 
