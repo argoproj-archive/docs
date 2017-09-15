@@ -185,26 +185,26 @@
         },
         {
           "title": "Monitoring",
-          "summary": "",
-          "details": "",
+          "summary": "View total cost of cluster, health of hosts, job summary",
+          "details": "View total cost of cluster spending, real-time data about containers, instances running on hosts, job summary",
           "path": "intro-monitor_gov_spend.md",
           "children": [
             {
               "title": "Cashboard",
-              "summary": "",
-              "details": "",
+              "summary": "View total cost of running Argo cluster using Kubernetes",
+              "details": "Cashboard displays how much you are charged for the instances that are currently running, and the actual utilization of those instances",
               "path": "user_guide/dashboards/cashboard.md"
-            },
+            },ß
             {
               "title": "Hosts",
-              "summary": "",
-              "details": "",
+              "summary": "Real-time data for instances and hosts running jobs on Argo",
+              "details": "Real-time details about the instances /hosts with running jobs in the Argo cluster, memory allocated to the instance and the percentage of utilization",
               "path": "user_guide/dashboards/hosts.md"
             },
             {
               "title": "Metrics",
-              "summary": "",
-              "details": "",
+              "summary": "Summary of jobs that succeeded, failed, queued, in-progress",
+              "details": "Summary of jobs that succeeded, failed, scheduled to run, in-progress, queued to run, and total spending within a specified time range",
               "path": "user_guide/dashboards/metrics.md"
             }
           ]
@@ -215,48 +215,48 @@
       "title": "YAML DSL",
       "path": "yaml/dsl_reference_intro.md",
       "summary": "YAML DSL for Kubernetes workflow engine",
-      "details": "Argo’s YAML DSL describes the specification to write Argo container, deployment, workflow templates",
+      "details": "Argo’s YAML DSL describes the specification to write Argo container, workflow, deployment, policy, fixture, and policy templates",
       "children": [
         {
           "title": "Container Templates",
-          "summary": "",
-          "details": "",
+          "summary": "The YAML template that Argo specifies for running a container",
+          "details": "The Argo YAML DSL specification for running containers and details about the container template sections (common name and type, inputs, outputs)",
           "path": "yaml/container_templates.md"
         },
         {
           "title": "Workflow Template",
-          "summary": "",
-          "details": "",
+          "summary": "The YAML template that Argo specifies for running workflows",
+          "details": "The Argo YAML DSL specification for running workflows and details about the workflow template sections (common name and type, inputs, outputs, steps)",
           "path": "yaml/workflow_templates.md"
         },
         {
           "title": "Policy Templates",
-          "summary": "",
-          "details": "",
+          "summary": "YAML template that defines rules for triggering workflows",
+          "details": "The Argo YAML DSL specification for defining rules that trigger a job or notification. Policies are applied to other templates (Workflow, Container, Deployment)",
           "path": "yaml/policy_templates.md"
         },
         {
           "title": "Deployment Template",
-          "summary": "",
-          "details": "",
+          "summary": "The Argo YAML template for specifying a long-running service",
+          "details": "The Argo YAML DSL template for specifying a long-running service (such as a microservice or application)",
           "path": "yaml/deployment_template.md"
         },
         {
           "title": "Fixture Template",
-          "summary": "",
-          "details": "",
+          "summary": "The YAML template that defines fixtures for external resources",
+          "details": "The Argo YAML DSL template for defining fixture classes that represent resources outside of Argo",
           "path": "yaml/fixture_template.md"
         },
         {
           "title": "Project Templates",
-          "summary": "",
-          "details": "",
+          "summary": "YAML template that specifies apps or workflows in Catalog",
+          "details": "The Argo YAML DSL template for defining apps or workflows that can be accessed in the Argo Catalog",
           "path": "yaml/project_templates.md"
         },
         {
           "title": "Using Special Values for Parameters",
-          "summary": "",
-          "details": "",
+          "summary": "Special values that refer to session-specific data",
+          "details": "The Argo DSL language defines special values as Argo variables that refer to session-specific data; YAML templates use this data to populate the variables",
           "path": "yaml/special_parameters_values.md"
         }
       ]

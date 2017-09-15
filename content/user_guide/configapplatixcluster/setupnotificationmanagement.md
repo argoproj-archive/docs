@@ -118,9 +118,9 @@ NOTE: Your Slack team administrator must perform these procedure to enable Slack
     ![](../../../images/7_oauth-token_919x645.png)
 
 10.  Copy the generated OAuth token (You use this token in the next step for configuring Argo for Slack.
-11.  (Argo Web UI) Go to Configurations > Setup Alert Notifications, and click Slack icon.
+11.  (Argo Web UI) Go to **Configurations** > **Setup Alert Notifications**, and click Slack icon.
 
-12.  (Argo Web UI) Under ENTER OAUTH TOKEN, paste the OAuth token that Slack generated.
+12.  (Argo Web UI) Under **ENTER OAUTH TOKEN**, paste the OAuth token that Slack generated.
 
 13.  (Optional) Click **TEST** if you want to test the connection to the server before activating it.
 14.  Click **CONNECT**.
