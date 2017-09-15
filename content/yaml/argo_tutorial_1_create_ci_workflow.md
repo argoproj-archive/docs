@@ -37,7 +37,7 @@ The CI workflow uses 4 YAML files from the repo at  [https://github.com/argoproj
 
 Run the CI workflow:
 
-```$ ~/argo job submit example-workflow-approval --argument "parameters.COMMIT=\<commit_ID>" --argument "parameters.REPO=https://github.com/argoproj/ci-workflow.git" --argument "parameters.REQUIRED_APPROVALS=<your_email_address>" --repo https://github.com/argoproj/ci-workflow.git```
+```$ ~/argo job submit example-workflow-approval --argument "parameters.COMMIT=7748dc80185d35347ba879ae61363d41c6edac95" --argument "parameters.REPO=https://github.com/argoproj/ci-workflow.git" --argument "parameters.REQUIRED_APPROVALS=<your_email_address>" --repo https://github.com/argoproj/ci-workflow.git```
 
 Get the job ID of the running job:
 

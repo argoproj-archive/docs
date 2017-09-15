@@ -194,7 +194,7 @@
               "summary": "View total cost of running Argo cluster using Kubernetes",
               "details": "Cashboard displays how much you are charged for the instances that are currently running, and the actual utilization of those instances",
               "path": "user_guide/dashboards/cashboard.md"
-            },ß
+            },
             {
               "title": "Hosts",
               "summary": "Real-time data for instances and hosts running jobs on Argo",

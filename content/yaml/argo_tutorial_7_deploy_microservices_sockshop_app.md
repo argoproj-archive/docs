@@ -9,6 +9,15 @@ This tutorial shows how to deploy and scale a stateful, microservices-based appl
   * You have successfully [installed Argo](https://argoproj.github.io/argo-site/get-started/installation).
   * You have integrated Argo with Appstore containing Sock shop microservices-based application [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo)
   * You have [created an AWS RDS database instance of type "PostgreSQL"](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html). Make sure you've taken all default parameters and that Argo can access the database endpoint.
+  * (CLI only) You have logged into the Argo command line. To do this, go to your terminal, cd to the directory for the Argo install, and enter the following information at the command-line prompt:
+
+    * ```$ ~/argo login```
+    * Press enter for "Enter a configuration name (default):" (this takes the default value)
+    * *your_Argo_cluster_URL* for "Enter cluster URL:"
+    * *your_email_address* for "Enter cluster username:"
+    * *your_Argo_cluster_password* for "Enter cluster password:"
+  <!--Config written to: /Users/<your_name>/.argo/default-->
+
 
 ## About the YAML Files
 
@@ -16,8 +25,21 @@ The Sock shop workflow uses 3 YAML files from the ``.argo` directory of the repo
 
 3.  Review the `sock-shop-workflow.yaml` under `.argo` folder in that repo. This file defines a workflow that has fourteen deployments for deploying sock shop and three deployments to deploy Zipkin. Argo deployment YAMLs internally maps to Kubernetes deployment and service YAMLs. For more details on the Argo YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
-## Deploy and Scale Example Sock Shop App
+## Deploy and Scale Sample Sock Shop App
 
+### From Argo CLI:
+
+```~/argo job submit ??????????????? --argument "parameters.COMMIT=<commit_ID>" --argument "parameters.REPO=https://github.com/argoproj/example-dind.git"  --repo https://github.com/argoproj/example-dind.git```
+
+Get the job ID of the running job:
+
+```$ ~/argo job list```
+
+Get the status of a job:
+
+```$ ~/argo job show <job_ID>```
+
+### From Argo Web UI
 
 1. Because the Sock shop deployment needs to persist the data, you must first create six EBS volumes. Go to Argo web UI->Infrastructure→Volumes and create six EBS volumes of 1 GB each. Name the volumes as `sock-shop-order-db`, `sock-shop-cart`, `sock-shop-cart-db`, `sock-shop-shipping`, `sock-shop-user-db`, and `sock-shop-order`. You can do this automatically in the YAML template. For an example, see [Adding a Volume as Storage for Deployment](./../yaml/ex_add_volume_deployment.md).
 2.  Configure the domains for deployment. This allows you to control which applications can access a deployment. From the Argo Web UI, go to Navigation Bar > Settings > Domain Management, make your changes, and click UPDATE DOMAINS.
