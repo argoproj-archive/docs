@@ -10,7 +10,7 @@ A. Your YAML code was grabbing something that wasn't created. Argo has YAML chec
 
 Q. How does Argo manage artifacts that are produced by a job?
 
-A. There are two ways Argo manages artifacts. Internally, the Argo system manages artifacts for you. Use the internal system when you only need to use them for an application? Create names for the artifact and you can reference them in any workflow or job. The other method is to use an external storage system to manage your artifacts. This is useful when you need to distribute binary files. Argo is pre-integrated with the Nexus Repository for storing artifacts.
+A. There are two ways Argo manages artifacts. Internally, the Argo system manages artifacts for you. Use the internal system when you only need to use them for an application. Create names for the artifact and you can reference them in any workflow or job. The other method is to use an external storage system to manage your artifacts. This is useful when you need to distribute binary files. Argo is pre-integrated with the Nexus Repository for storing artifacts.
 
 Q. How do I find out how much usage the Kubernetes cluster is using versus Argo cluster in the AWS system?
 
