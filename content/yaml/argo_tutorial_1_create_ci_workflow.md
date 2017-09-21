@@ -35,8 +35,6 @@ The CI workflow uses 4 YAML files from the repo at  [https://github.com/argoproj
 
 ### From Argo CLI:
 
-Run the CI workflow:
-
 ```
 
 $ argo job submit example-workflow-approval --argument "parameters.REQUIRED_APPROVALS=<your_email_address>" --repo https://github.com/argoproj/ci-workflow.git
@@ -89,6 +87,7 @@ $ argo job show <job_ID>
  From Argo CLI
 
  You run the same CLI command as shown above except you add two input parameters, `commit` and `repo`, to your workflow like this:
+
   ```
 
   $ argo job submit example-workflow-approval --argument "parameters.REQUIRED_APPROVALS=<your_email_address>" --argument "parameters.COMMIT=<commit_id>" --argument "parameters.REPO=h<url_to_your_repo>

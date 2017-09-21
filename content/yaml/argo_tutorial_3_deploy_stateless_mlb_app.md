@@ -52,7 +52,7 @@ $ argo job submit "Deploy MLB" --argument "parameters.APPNAME=mlb-app"  --argume
 
 ```
 
-NOTE: This code example does not include the parameter arguments, `commit` and `repo`. These are optional because they are specified as special parameters (enclosed with `%%` signs) Argo CLI automatically checks for the repo and the commit associated with the job.
+NOTE: This code example does not include the parameter arguments, `commit` and `repo`. These are optional because they are specified in the YAML workflow file as special parameters (enclosed with `%%` signs), which Argo automatically checks for the repo and the commit associated with the job.
 
 <!-- complete command line that includes commit and repo arguments-->
 <!--
@@ -60,11 +60,19 @@ $ argo job submit "Deploy MLB" --argument "parameters.COMMIT=4714410fd6a47db3022
 -->
 Get the job ID of the running job:
 
-```$ argo job list```
+```
+
+$ argo job list
+
+```
 
 Get the status of a job:
 
-```$ argo job show <job_ID>```
+```
+
+$ argo job show <job_ID>
+
+```
 
 ### From Argo Web UI
 

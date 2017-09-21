@@ -63,15 +63,28 @@ Using YAML files, you'll declare the "named" volumes in the respective deploymen
 
 ### From Argo CLI:
 
-```$ argo job submit sock-shop-workflow --argument "parameters.APP_NAME=sock-shop" --argument "parameters.CART_DB_VOL_NAME=sock-shop-cart-db" --argument "parameters.CART_VOL_NAME=sock-shop-cart" --argument "parameters.ORDERS_DB_VOL_NAME=sock-shop-order-db" --argument "parameters.ORDERS_VOL_NAME=sock-shop-order" --argument "parameters.SHIPPING_VOL_NAME=sock-shop-shipping" --argument "parameters.USER_DB_VOL_NAME=sock-shop-user-db" --repo https://github.com/argoproj/microservices-demo.git```
+```
+
+$ argo job submit sock-shop-workflow --argument "parameters.APP_NAME=sock-shop" --argument "parameters.CART_DB_VOL_NAME=sock-shop-cart-db" --argument "parameters.CART_VOL_NAME=sock-shop-cart" --argument "parameters.ORDERS_DB_VOL_NAME=sock-shop-order-db" --argument "parameters.ORDERS_VOL_NAME=sock-shop-order" --argument "parameters.SHIPPING_VOL_NAME=sock-shop-shipping" --argument "parameters.USER_DB_VOL_NAME=sock-shop-user-db" --repo https://github.com/argoproj/microservices-demo.git
+
+```
 
 Get the job ID of the running job:
 
-```$ argo job list```
+```
+
+$ argo job list
+
+```
 
 Get the status of a job:
 
-```$ argo job show <job_ID>```
+```
+
+$ argo job show <job_ID>
+
+```
+
 
 ### From Argo Web UI
 

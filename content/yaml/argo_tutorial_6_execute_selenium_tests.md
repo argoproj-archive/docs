@@ -15,7 +15,7 @@ In this tutorial, you'll run multiple steps, which are grouped into nested workf
   * You have integrated Argo with Appstore containing sample selenium test [https://github.com/argoproj/appstore/](https://github.com/argoproj/appstore/).
   * (CLI only) You have logged into the Argo command line. To do this, go to your terminal, cd to the directory for the Argo install, and enter the following information at the command-line prompt:
 
-    * ```$ ~/argo login```
+    * `$ argo login`
     * Press enter for "Enter a configuration name (default):" (this takes the default value)
     * *your_Argo_cluster_URL* for "Enter cluster URL:"
     * *your_email_address* for "Enter cluster username:"
@@ -44,15 +44,28 @@ NOTE: For more details on the workflow and container YAML DSL please check the Y
 
 ### From Argo CLI:
 
-```argo job submit "Selenium Demo" --argument "parameters.BROWSER=chrome" --argument "parameters.TEST_FAILURE=false" --repo https://github.com/argoproj/appstore.git```
+```
+
+argo job submit "Selenium Demo" --argument "parameters.BROWSER=chrome" --argument "parameters.TEST_FAILURE=false" --repo https://github.com/argoproj/appstore.git
+
+```
 
 Get the job ID of the running job:
 
-```$ argo job list```
+```
+
+$ argo job list
+
+```
 
 Get the status of a job:
 
-```$ argo job show <job_ID>```
+```
+
+$ argo job show <job_ID>
+
+```
+
 
 ### From Argo Web UI
 
