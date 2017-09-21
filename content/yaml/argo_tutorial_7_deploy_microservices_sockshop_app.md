@@ -10,7 +10,7 @@ This tutorial shows how to deploy and scale a stateful, microservices-based appl
   * You have integrated Argo with Appstore containing Sock shop microservices-based application [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo)
   * You have [created an AWS RDS database instance of type "PostgreSQL"](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html). Make sure you've taken all default parameters and that Argo can access the database endpoint.
   * (CLI only) You have logged into the Argo command line. To do this, go to your terminal, cd to the directory for the Argo install, and enter the following information at the command-line prompt:
-    * ```$ argo login```
+    * `$ argo login`
     * Press enter for "Enter a configuration name (default):" (this takes the default value)
     * *your_Argo_cluster_URL* for "Enter cluster URL:"
     * *your_email_address* for "Enter cluster username:"

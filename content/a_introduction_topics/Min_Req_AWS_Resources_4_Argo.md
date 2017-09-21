@@ -1,6 +1,6 @@
 # Prerequisites for Argo to Run on AWS
 
-<a name="MinResourceType4AWS"></a>Q. To enable Argo to run in AWS, you must meet the following minimum AWS resource requirements:
+<a name="MinResourceType4AWS"></a>To enable Argo to run in AWS, you must meet the following minimum AWS resource requirements:
 
 * A Virtual Private Cloud (VPC) with a subnet that can access a NAT gateway. (The creator instance will need to download the software to install.)
 * You must provision the resource types listed in the following table:

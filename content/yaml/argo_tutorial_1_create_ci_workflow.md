@@ -15,7 +15,7 @@ This tutorial assumes the following:
 * You have integrated Argo with the sample CI workflow repo at [https://github.com/argoproj/ci-workflow](https://github.com/argoproj/ci-workflow)
 * (CLI only) You have logged into the Argo command line. To do this, go to your terminal, cd to the directory for the Argo install, and enter the following information at the command-line prompt:
 
-  * ```$ argo login```
+  * `$ argo login`
   * Press enter for "Enter a configuration name (default):" (this takes the default value)
   * *your_Argo_cluster_URL* for "Enter cluster URL:"
   * *your_email_address* for "Enter cluster username:"
@@ -37,15 +37,27 @@ The CI workflow uses 4 YAML files from the repo at  [https://github.com/argoproj
 
 Run the CI workflow:
 
-```$ argo job submit example-workflow-approval --argument "parameters.REQUIRED_APPROVALS=<your_email_address>" --repo https://github.com/argoproj/ci-workflow.git```
+```
+
+$ argo job submit example-workflow-approval --argument "parameters.REQUIRED_APPROVALS=<your_email_address>" --repo https://github.com/argoproj/ci-workflow.git
+
+```
 
 Get the job ID of the running job:
 
-```$ argo job list```
+```
+
+$ argo job list
+
+```
 
 Get the status of a job:
 
-```$ argo job show <job_ID>```
+```
+
+$ argo job show <job_ID>
+
+```
 
 ### From Argo Web UI
 1. Go to the **Catalog** menu in the Argo Web UI, select **CI Workflow**  and click **Run**.
@@ -76,7 +88,12 @@ Get the status of a job:
 
  From Argo CLI
 
-  ```$ argo job submit <name_of_workflow_template> --arguments <arg_1> --arguments <arg_2>```
+ You run the same CLI command as shown above except you add two input parameters, `commit` and `repo`, to your workflow like this:
+  ```
+
+  $ argo job submit example-workflow-approval --argument "parameters.REQUIRED_APPROVALS=<your_email_address>" --argument "parameters.COMMIT=<commit_id>" --argument "parameters.REPO=h<url_to_your_repo>
+
+  ```
 
   (Optional) If you want your CI-Workflow to show up in your Catalog menu, just copy the `example-approval-project.yaml` file into the `.argo` directory in your repo. This YAML file defines how to add a CI workflow item in your Catalog.
 

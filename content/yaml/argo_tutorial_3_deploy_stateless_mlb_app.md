@@ -14,7 +14,7 @@ This tutorial assumes the following:
 * You have integrated Argo with the sample MLB repo at [https://github.com/argoproj/appstore](https://github.com/argoproj/appstore).
 * (CLI only) You have logged into the Argo command line. To do this, go to your terminal, cd to the directory for the Argo install, and enter the following information at the command-line prompt:
 
-  * ```$ argo login```
+  * `$ argo login`
   * Press enter for "Enter a configuration name (default):" (this takes the default value)
   * *your_Argo_cluster_URL* for "Enter cluster URL:"
   * *your_email_address* for "Enter cluster username:"
@@ -46,7 +46,11 @@ For more details on writing a deployment file using Argo YAML DSL, see [Deployme
 
 ### From Argo CLI:
 
-```$ argo job submit "Deploy MLB" --argument "parameters.APPNAME=mlb-app"  --argument "parameters.YEAR=2016"```
+```
+
+$ argo job submit "Deploy MLB" --argument "parameters.APPNAME=mlb-app"  --argument "parameters.YEAR=2016"
+
+```
 
 NOTE: This code example does not include the parameter arguments, `commit` and `repo`. These are optional because they are specified as special parameters (enclosed with `%%` signs) Argo CLI automatically checks for the repo and the commit associated with the job.
 

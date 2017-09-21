@@ -16,7 +16,7 @@ This tutorial assumes the following:
 * You have integrated Argo with the sample DinD repo at [https://github.com/argoproj/example-dind](https://github.com/argoproj/example-dind).
 * (CLI only) You have logged into the Argo command line. To do this, go to your terminal, cd to the directory for the Argo install, and enter the following information at the command-line prompt:
 
-  * ```$ argo login```
+  * `$ argo login`
   * Press enter for "Enter a configuration name (default):" (this takes the default value)
   * *your_Argo_cluster_URL* for "Enter cluster URL:"
   * *your_email_address* for "Enter cluster username:"
@@ -30,8 +30,10 @@ The DinD workflow uses 2 YAML files from the repo at [https://github.com/argopro
 * `dind-workflow.yaml` - creates a container for checking out code, builds a node.js image, pushes the image to Docker hub. To enable a Docker-in-Docker workflow, you must add two lines to the container template that is part of this workflow:
 
   ```
+
   annotations:
     ax_ea_docker_enable: '{"graph-storage-size": "10Gi", "cpu_cores":0.1, "mem_mib":200}'
+
   ```
 For more details about the two lines of YAML code, see [Container Calling Docker Commands "Docker-in-Docker"](../yaml/container_templates.md#ContainerDinDWorkflow).
 
@@ -43,15 +45,27 @@ NOTE: To make the credentials secure for accessing the container registry, this 
 
 ### From Argo CLI:
 
-```$ argo job submit example-build-using-dind --argument "parameters.COMMIT=6f8efcd7bcbec32bbf672e78a7527724867fa391" --argument "parameters.REPO=https://github.com/argoproj/example-dind.git"  --repo https://github.com/argoproj/example-dind.git```
+```
+
+$ argo job submit example-build-using-dind --repo https://github.com/argoproj/example-dind.git
+
+```
 
 Get the job ID of the running job:
 
-```$ argo job list```
+```
+
+$ argo job list
+
+```
 
 Get the status of a job:
 
-```$ argo job show <job_ID>```
+```
+
+$ argo job show <job_ID>
+
+```
 
 ### From Argo Web UI
 
