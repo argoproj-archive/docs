@@ -48,21 +48,26 @@ NOTE: For more details on the workflow and container YAML DSL please check the Y
 
 argo job submit "Selenium Demo" --argument "parameters.BROWSER=chrome" --argument "parameters.TEST_FAILURE=false" --repo https://github.com/argoproj/appstore.git
 
+
 ```
 
 Get the job ID of the running job:
+
 
 ```
 
 $ argo job list
 
+
 ```
 
 Get the status of a job:
 
+
 ```
 
 $ argo job show <job_ID>
+
 
 ```
 
