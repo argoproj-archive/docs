@@ -1,6 +1,6 @@
 # Using Fixtures for Accessing External Resources
 
-When you run a workflow or deploy an app, you may need to access a resource that is external to Argo, such as a pool of virtual machines (VMs), databases, ec2 instances, other REST-based services, etc. To handle these external resources, Argo provides the concept of “managed fixtures”. A managed fixture allows Argo to perform life-cycle management of an external resource such as creating and deleting instances, loading data, or any other custom action. In a managed fixture, attributes are used to distinguish instances that come from different managed fixture classes. Actions are workflows that you can perform on a managed fixture, (such as creating a managed fixture for an external database) Fixtures also allow you to use policies to automatically manage resources such as auto-suspension or termination based on various metrics and conditions.
+When you run a workflow or deploy an app, you may need to access a resource that is external to Argo, such as a pool of virtual machines (VMs), databases, EC2 instances, other REST-based services, etc. To handle these external resources, Argo provides the concept of “managed fixtures”. A managed fixture allows Argo to perform life-cycle management of an external resource such as creating and deleting instances, loading data, or any other custom action. In a managed fixture, attributes are used to distinguish instances that come from different managed fixture classes. Actions are workflows that you can perform on a managed fixture, (such as creating a managed fixture for an external database) Fixtures also allow you to use policies to automatically manage resources such as auto-suspension or termination based on various metrics and conditions.
 
 The process for using fixtures in a workflow or app is
 
@@ -8,18 +8,18 @@ The process for using fixtures in a workflow or app is
 
     NOTE: Before you start using fixtures, make sure you have already created a YAML template for the fixture class and referenced it in the appropriate workflow and container templates. For details about the YAML template, see [Creating a Managed Fixture for Workflows and Apps](./../../yaml/ex_create_managed_fixtures.md)..
 
-2.  Go to Infrastructure > Fixture and add the fixture class you want to use and select the repo branch if you have multiple branches that contain this fixture class definition. See [To add a new fixture class to your repo branch](#AddFixtureClass2Repo)
+2.  Go to **Navigation bar** > **Infrastructure** > **Fixtures** and select the fixture class you want to use and select the repo branch if you have multiple branches that contain this fixture class definition. See [To add a new fixture class to your repo branch](#AddFixtureClass2Repo).
 3.  Create an instance of the fixture class. For more details, see [To create an instance of a fixture class](#CreateInstanceFixtureClass).
 
 After you create an instance of the fixture class, the instance of the fixture is available to use in your workflows. From the Console, you can manage the instance by selecting the actions you want to perform on the instance. (The actions were defined in the YAML template for the fixture class.) For details, see [To select an action on an instance of a fixture class](#TakeActionOnInstance)
 
-You can also monitor the usage of the fixture instance. To view details about the instance of the fixture, its attributes, and its job history, see .[To monitor an instance of a fixture class](#MonitorFixtureInstance).
+You can also monitor the usage of the fixture instance. To view details about the instance of the fixture, its attributes, and its job history, see [To monitor an instance of a fixture class](#MonitorFixtureInstance).
 
 Going forward, if you decide later to remove a fixture class but your deployments still needs to use a fixture class, you can reassign another fixture class from a different repo branch to use. For details, see [To reassign a fixture class](#ReassignFixtureTemplate)
 
 ## <a name="AddFixtureClass2Repo"></a>To add a new fixture class to your repo branch
-
-1.  Go to Infrastructure > Fixtures. (The Console displays the existing fixtures that are available for workflows to use.)
+<!--Waiting for Alex's response about "missing" icon for adding fixture class to repo branch 9-28-17-->
+1.  Go to **Navigation bar** > **Infrastructure** > **Fixtures**. (The Console displays the existing fixtures that are available for workflows to use.)
 2.  Click ![](../../../images/add_button_31x29.png) (Add a Fixture Class dialog displays)
 3.  Click Select for the fixture class you want to add to the Cluster.
 4.  Click the dropdown to select the repo branch having the fixture class definition.
