@@ -7,9 +7,9 @@
       "details": "Tutorials for workflows on Kubernetes - CI/CD, DinD, deploy microservices, volumes. Create YAML templates for workflows and deployments",
       "children": [
         {
-          "title": "Tutorial 1: Create CI Workflow",
-          "summary": "Create CI workflow using Kubernetes workflow | Argo",
-          "details": "Tutorial for creating CI workflow using Argoproj, container-native workflow engine on Kubernetes",
+          "title": "Tutorial 1: Create CI Pipeline",
+          "summary": "Create CI Pipeline using Kubernetes workflow | Argo",
+          "details": "Tutorial for creating CI Pipeline using Argoproj, container-native workflow engine on Kubernetes",
           "path": "yaml/argo_tutorial_1_create_ci_workflow.md"
         },
         {

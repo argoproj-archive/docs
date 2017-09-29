@@ -39,23 +39,31 @@ Argo allows you to securely embed and use encrypted secrets in your YAML templat
 
 ## Storing Configuration information
 
-If you need to store configuration information (such as secrets for Kubernetes) outside of a YAML file, use this procedure to create new config information:
+If you need to store configuration information either as a secret for Kubernetes or as public information (which is outside of a YAML template), use this procedure:
 
-1. Click **Navigation bar** >  **Infrastructure** > **Configs**.
+1. Click **Navigation bar** > **Infrastructure** > **Configs**.
 
-2. Click **+** and enter the **Name** for the configuration and an optional **Description**.
+2. Click **+** and select **Add New Config as Kubernetes Secret** or **Add New Public Config**.
 
-3. Click **ADD** and enter the "Key-Value" pairs for each piece of data.
+3. Enter the **Name** for the configuration and an optional **Description**.
 
-4. Select **Encryped as Kubernetes Secret** or **Public** for each data entered.
+4. Click **+ADD** and enter the "Key-Value" pairs for each piece of data.
 
 5. Click **SAVE**.
+
+  The new configuration displays on the CONFIGURATIONS page.
+
+To change a configuration data, click ![](../../../images/3_vertical_dots_25x26_GREEN.png) and select **Edit**.
+
+To delete the configuration data, click ![](../../../images/3_vertical_dots_25x26_GREEN.png) and select **Delete**.
+
+NOTE: You can only edit or delete the configurations you created. For all other configurations, you have read-only access. The configuration data that are Kubernetes secrets are displayed in encrypted form.
 
 ## Configuring the Signed Certificate for Argo
 
 NOTE: When you created your Argo, by default the Cluster provides a self-signed certificate. This appears in the **SET CERTIFICATE** section under the heading PUBLIC CERTIFICATE. You can replace the self-signed certificate from Argo with your signed certificates from a certificate authority (CA).
 
-1.  Click **Navigation bar** >  **Administration** > **Settings** > **System Settings**. 
+1.  Click **Navigation bar** >  **Administration** > **Settings** > **System Settings**.
 
 2. Under **SET CERTIFICATE**, enter your signed certificate.
 2.  Click **UPDATE**.

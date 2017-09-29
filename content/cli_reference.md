@@ -1,4 +1,4 @@
-# CLI Reference
+# Cluster CLI Reference
 
 <!-- Remove all content about “environmental variables” --- this is already documented in the command-line help for the argocluster install options (version, registry)
 
@@ -115,7 +115,7 @@ This is the basic command for installing Argo:
 
 ```
 
-argocluster install --cluster-name <CLUSTER_NAME>
+$ argocluster install --cluster-name <CLUSTER_NAME>
 
 ```
 
@@ -603,6 +603,7 @@ Uninstalls a cluster and cleans up all cluster-related resources in your cloud p
 NOTE: You may need to manually delete the S3 bucket as it is shared by all clusters in your cloud provider account.
 
 This is the basic command for uninstalling Argo:
+
 
  ```
 
