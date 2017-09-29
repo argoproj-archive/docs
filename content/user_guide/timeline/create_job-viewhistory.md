@@ -19,7 +19,7 @@ NOTE: If you have already run a job from a specific commit, you can run the same
 
 The Argo Web UI provides multiple ways to view the YAML templates that a job uses. You can simply click **Templates** and then click a row in the template table to see the details for a specific template. From this view, you can
 
-*   Create a job from a specific YAML template by clicking ![](./../images/3_vertical_dots_25x26_GREEN.png) at the end of each row and selecting **Create New Job**.
+*   Create a job from a specific YAML template by clicking ![](../../../images/3_vertical_dots_25x26_GREEN.png) at the end of each row and selecting **Create New Job**.
 *   View all the available YAML templates from a branch
 
 *   View the WORKFLOW for a given job based on the YAML template. Click any step in the workflow and see the corresponding code in the YAML viewer.
