@@ -604,12 +604,21 @@ NOTE: You may need to manually delete the S3 bucket as it is shared by all clust
 
 This is the basic command for uninstalling Argo:
 
+copied from install command
+```
 
- ```
+$ argocluster uninstall --force-uninstall --cluster-name <yourClusterName>
 
- $ argocluster uninstall --force-uninstall --cluster-name <_yourClusterName_>
+```
 
- ```
+
+removed leading space at beginning of each line
+
+```
+
+$ argocluster uninstall --force-uninstall --cluster-name <_yourClusterName_>
+
+```
 
 <!--from Harry;
 ### Options
