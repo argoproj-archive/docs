@@ -3,7 +3,7 @@
 
 ### Submitting a Job
   Usage: **submitting through a template from a repo branch**
-    argo job submit TEMPLATE_NAME --argument INPUT_PARAMETER_PATH --branch NAME_OF_BRANCH --repo URL_OF_REPOSITORY
+    argo job submit TEMPLATE_NAME --argument <INPUT_PARAMETER_PATH> --branch 	&#60;NAME_OF_BRANCH&#62; --repo URL_OF_REPOSITORY
 
 **submitting through a local template**
     argo job submit TEMPLATE_NAME **--local**
