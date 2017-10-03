@@ -2,19 +2,14 @@
 
 Use these commands to execute the common tasks of running workflows and applications on a Kubernetes cluster.
 
-NOTE: If you want to access the REST-based APIs for the SDK, add `/swagger` at the end of the URL for your Kubernetes cluster. For example, suppose the cluster URL is https://sampleapp.com. You would append the URL like this:
-
-```
-
-https://sampleapp.com/swagger
-
- ```
+NOTE: If you want to access the REST-based APIs for the SDK, add `/swagger` at the end of the URL for your Kubernetes cluster. For example, suppose the cluster URL is `https://sampleapp.com`. You would append the URL like this: `https://sampleapp.com/swagger`.
 
 ### Log into Argo
 
 ```
 
 $ ./argo login
+
 
 ```
 
@@ -45,8 +40,6 @@ Validating a list of of Argo YAML Template files in a directory
 $ argo yaml validate <filename1> <filename2> <filename3>
 
 ```
-
-
 
 ### Submitting a Job
 * **Using a template from a repo branch**
