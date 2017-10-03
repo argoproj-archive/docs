@@ -4,7 +4,7 @@ Use these commands to execute the common tasks of running workflows and applicat
 
 NOTE: If you want to access the REST-based APIs for the SDK, add `/swagger` at the end of the URL for your Kubernetes cluster. For example, suppose the cluster URL is https://sampleapp.com. You would append the URL like this:
 
-```text
+```
 
 https://sampleapp.com/swagger
 
