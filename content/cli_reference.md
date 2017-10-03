@@ -5,11 +5,11 @@
 
 Point to the directory where you installed Argo and enter the following command:
 
- ```
+```
 
- $ ./argo cluster
+$ argo cluster
 
- ```
+```
 
 After you enter this command, the prompt displays `argo cluster ops>` which means you are in the shell for managing a Kubernetes cluster from Argo.
 
