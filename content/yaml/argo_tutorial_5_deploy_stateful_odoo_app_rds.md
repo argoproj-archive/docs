@@ -35,7 +35,7 @@ In this tutorial, ` odoo-with-rds.yaml` file refers to a named volume `odoo-rds`
 
 ```
 
-argo job submit odoo-workflow-with-rds --argument "parameters.APP_NAME=odoo-rds-with-vols" --argument "parameters.APP_VOL_NAME=odoo-rds" --argument "parameters.DBHOST=odoo.ccxcovx73umg.us-west-2.rds.amazonaws.com" --argument "parameters.PASSWORD= password" --argument "parameters.USER=odoo" --repo https://github.com/argoproj/odoo-app.git
+argo job submit odoo-workflow-with-rds --argument "parameters.APP_NAME=odoo-rds-with-vols" --argument "parameters.APP_VOL_NAME=odoo-rds" --argument "parameters.DBHOST=<URL_to_RDS_endpoint>" --argument "parameters.PASSWORD= password" --argument "parameters.USER=odoo" --repo https://github.com/argoproj/odoo-app.git
 
 ```
 
@@ -78,17 +78,32 @@ $ argo job show <job_ID>
 
 ## Running Your Deployment Workflow
 
-
 You have two options for running your customized Deployment workflow:
 
  * **Manually**
-	1. Go to **Templates** menu, select your YAML template and click **Create a New Job**.
-	1. Select the CI workflow name, enter values for the input parameters and click **Submit**.  
 
-   (Optional)  If you want your app to display in your Catalog menu, just modify the `Project` section in the `odoo-project.yaml` YAML template.
+ **From Argo CLI**
+
+ You run the same CLI command as shown above except you add two input parameters, `commit` and `repo`, and the repo branch flag like this:
+
+ ```
+
+ argo job submit odoo-workflow-with-rds --argument "parameters.APP_NAME=odoo-rds-with-vols" --argument "parameters.APP_VOL_NAME=odoo-rds" --argument "parameters.DBHOST=<URL_to_RDS_endpoint>" --argument "parameters.PASSWORD= password" --argument "parameters.USER=odoo" --argument "parameters.COMMIT=<commit_id>" --argument "parameters.REPO=<url_to_your_repo>" --branch <name_of_branch>
+
+ ```
+ (Optional)  If you want your app to display in your Catalog menu, just modify the `Project` section in the `odoo-project.yaml` YAML template.
+
+**From Argo Web UI**
+
+1. Go to **Templates** menu, select your YAML template and click **Create a New Job**.
+1. Select the CI workflow name, enter values for the input parameters and click **Submit**.
+1. (Optional) If you want your app to display in your Catalog menu, just modify the `Project` section in the `odoo-project.yaml` file.
 
 
  * **Automatically**
+
+ NOTE: The automatic feature is only available through the Argo Web UI.
+
     1. Add `commit` and `repo` as input parameters to your workflow as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
     2. Create and activate a Policy template to trigger this workflow for every commit as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
 

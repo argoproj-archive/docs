@@ -46,7 +46,7 @@ NOTE: For more details on the workflow and container YAML DSL please check the Y
 
 ```
 
-argo job submit "Selenium Demo" --argument "parameters.BROWSER=chrome" --argument "parameters.TEST_FAILURE=false" --repo https://github.com/argoproj/appstore.git
+$ argo job submit "Selenium Demo" --argument "parameters.BROWSER=chrome" --argument "parameters.TEST_FAILURE=false" --repo https://github.com/argoproj/appstore.git
 
 
 ```
@@ -106,12 +106,29 @@ You have two options for running your selenium workflow:
 
  * **Manually**
 
-	1. Go to **Timeline** menu, select a commit and click **Create a New Job**.
-	1. Select the YAML templates to create a job, click **NEXT**, enter values for the input parameters and click **Submit**.  You can also run all your YAML templates from the **Templates** menu.
+ **From Argo CLI**
 
-    (Optional) If you want to let users run the project from the **Catalog** menu, just copy the `selenium_test_project.yaml` file into the `.argo` directory of your repo and modify it.
+ You run the same CLI command as shown above except you add two input parameters, `commit` and `repo`, and the repo branch flag like this:
+
+ ```
+
+ $ argo job submit "Selenium Demo" --argument "parameters.BROWSER=chrome" --argument "parameters.TEST_FAILURE=false" --argument "parameters.COMMIT=<commit_id>" --argument "parameters.REPO=<url_to_your_repo>" --branch <name_of_branch>
+
+ ```
+
+ (Optional) If you want users to run the project from the **Catalog** menu, just copy the `selenium_test_project.yaml` file into the `.argo` directory of your repo and modify it.
+
+ **From Argo Web UI**
+
+  1. Go to **Timeline** menu, select a commit and click **Create a New Job**.
+  1. Select the YAML templates to create a job, click **NEXT**, enter values for the input parameters and click **Submit**.  You can also run all your YAML templates from the **Templates** menu.
+  1. (Optional) If you want users to run the project from the **Catalog** menu, just copy the `selenium_test_project.yaml` file into the `.argo` directory of your repo and modify it.
+
 
  * **Automatically**
-  	2. Create and activate a Policy template to trigger this workflow for every commit as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
 
-     After you've completed these steps, every time you make a commit in your repo, the Selenium test workflow is automatically triggered.   
+  NOTE: The automatic feature is only available through the Argo Web UI.
+
+  Create and activate a Policy template to trigger this workflow for every commit as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
+
+  After you've completed these steps, every time you make a commit in your repo, the Selenium test workflow is automatically triggered.   

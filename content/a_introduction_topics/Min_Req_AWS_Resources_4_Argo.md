@@ -2,8 +2,8 @@
 
 <a name="MinResourceType4AWS"></a>To enable Argo to run in AWS, you must meet the following minimum AWS requirements:
 
-* Installed the [AWS Command-Line Interface (CLI)](https://aws.amazon.com/documentation/cli/).
-* Created and configured your [AWS Named Profile](http://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html).
+* Installed [AWS Command-Line Interface (CLI)](https://aws.amazon.com/documentation/cli/) on your system.
+* Created and configured at least one [AWS Named Profile](http://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html).
 * Configured a Virtual Private Cloud (VPC) with a subnet that can access a NAT gateway. (The creator instance will need to download the software to install.)
 * Provision the AWS resource types listed in the following table:
 

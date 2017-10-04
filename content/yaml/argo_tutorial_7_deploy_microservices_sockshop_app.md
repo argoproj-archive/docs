@@ -21,7 +21,7 @@ This tutorial shows how to deploy and scale a stateful, microservices-based appl
 
 ## About the YAML Files
 
-The Sock shop workflow uses 1 top-level YAML files from the ``.argo` directory of the repo at [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo):
+The Sock shop workflow uses 1 top-level YAML files from the `.argo` directory of the repo at [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo):
 
 * `sock-shop-workflow.yaml` - This file defines a workflow that has fourteen deployment templates for deploying sock shop and three deployment templates to deploy Zipkin. These are YAML templates you'll run for the microservices-demo:ß
  - `carts-db` - deploys the mongoDB database that handles the shopping carts. (Uses named volume to store shopping cart data.)
@@ -108,7 +108,7 @@ If you stop or terminate the application and redeploy you can see that the data 
 
  To see the deployed app, click **ENDPOINTS** and select the URL for the Sock Shop Application.
 
-## Deploy and Scale Your Custom Stateful App
+## Deploy and Scale Your Customized Stateful Microservices App
 
 ### Create your YAML files
 
@@ -118,18 +118,34 @@ If you stop or terminate the application and redeploy you can see that the data 
 4.  (Optional) If you want Sock shop to show up in your Catalog, copy the `microservices-project.yaml` from [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo) to your repo's `.argo` folder. This YAML file defines how the app shows up in your Catalog menu. You can see and run all your YAML-based workflows from **Templates** menu in the Argo Web UI.
 4.  Integrate your repo with Argo. In Argo Web UI, select **Administration** > **Integrations** > **SCM**. Once integrated, the Argo Web UI displays your source code commits in the **Timeline** menu item.
 
-## Running Your Customized Selenium Test Workflow
+## Running Your Customized Stateful Microservices App
 
-You have two options for running your selenium workflow:
+You have two options for running your microservice app:
 
  * **Manually**
 
-	1. Go to **Templates** menu, search for your app name, click **+**.
-	1. Review the values for the input parameters and click **Submit**.  You can also run all your YAML templates from the **Templates** menu.
+ **From Argo CLI**
 
-    (Optional) If you want to let users run the project from the **Catalog** menu, just copy the `microservices-project.yaml` file into the `.argo` directory of your repo and modify it.
+ You run the same CLI command as shown above except you add two input parameters, `commit` and `repo`, and the repo branch flag like this:
+
+ ```
+
+ $ argo job submit sock-shop-workflow --argument "parameters.APP_NAME=sock-shop" --argument "parameters.CART_DB_VOL_NAME=sock-shop-cart-db" --argument "parameters.CART_VOL_NAME=sock-shop-cart" --argument "parameters.ORDERS_DB_VOL_NAME=sock-shop-order-db" --argument "parameters.ORDERS_VOL_NAME=sock-shop-order" --argument "parameters.SHIPPING_VOL_NAME=sock-shop-shipping" --argument "parameters.USER_DB_VOL_NAME=sock-shop-user-db" "parameters.COMMIT=<commit_id>" --argument "parameters.REPO=<url_to_your_repo>" --branch <name_of_branch>
+
+ ```
+  (Optional) If you want to let users run the project from the **Catalog** menu, just copy the `microservices-project.yaml` file into the `.argo` directory of your repo and modify it.
+
+  **From Argo Web UI**
+
+  1. Go to **Templates** menu, search for your app name, click **+**.
+  1. Review the values for the input parameters and click **Submit**.  You can also run all your YAML templates from the **Templates** menu.
+  1. (Optional) If you want to let users run the project from the **Catalog** menu, just copy the `microservices-project.yaml` file into the `.argo` directory of your repo and modify it.
+
 
  * **Automatically**
+
+   NOTE: The automatic feature is only available through the Argo Web UI.
+
   	2. Create and activate a Policy template to trigger this workflow for every commit as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
 
-     After you've completed these steps, every time you make a commit in your repo, the Selenium test workflow is automatically triggered.
+    After you've completed these steps, every time you make a commit in your repo, the microservices workflow is automatically triggered.

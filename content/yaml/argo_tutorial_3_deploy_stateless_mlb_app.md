@@ -81,7 +81,7 @@ $ argo job show <job_ID>
 
 ### From Argo Web UI
 
-1.  Configure the domain for your deployment (Navigation Bar > **Settings** > **Domain Management**, *<add-your-domain>*, and click **UPDATE DOMAINS**.
+1.  Configure the domain for your deployment (Navigation Bar > **Settings** > **Domain Management**, &#60;add-your-domain&#62;, and click **UPDATE DOMAINS**.
 2.  Go to **Catalog** and select **MLB** and click **Run**. You will see the workflow running in Argo Web UI. You can check logs by clicking on each step. When the workflow completes you will see a `mlb-app` application deployed under Applications tab in the Argo Web UI. You can see it has two deployments `mongo-deploy` and `mlb-deploy` with each deployment running one pod. You can view the app by clicking the `endpoint` in the `mlb-deploy`.
 3. From the deployment detail page, you can increase the number of instances/pods for each deployment, view the logs, and shell or bash into the container.
 
@@ -100,12 +100,28 @@ $ argo job show <job_ID>
 You have two options for running your customized deployment workflow:
 
  * **Manually**
+
+ **From Argo CLI**
+
+  You run the same CLI command as shown above except you add two input parameters, `commit` and `repo` and the repo branch flag like this:
+
+  ```
+  $ argo job submit "Deploy MLB" --argument "parameters.APPNAME=mlb-app"  --argument "parameters.YEAR=2016" --argument "parameters.COMMIT=<commit_id>" --argument "parameters.REPO=<url_to_your_repo>" --branch <name_of_branch>
+
+  ```
+
+  (Optional) If you want your stateless app to display in your Catalog menu, just modify the `Project` section in the `mlb.yaml` file. This YAML template defines how to add the workflow item to your Catalog.
+
+  **From Argo Web UI**
+
 	1. Go to **Timeline** menu, select a commit and click **Create a New Job**.
 	2. Select the CI workflow name, enter values for the input parameters and click **Submit**.  
 
-   (Optional)  If you want your stateless app to display in your Catalog menu, just modify the `Project` section in the `mlb.yaml` YAML template.
+   (Optional)  If you want your stateless app to display in your Catalog menu, just modify the `Project` section in the `mlb.yaml` file.
 
 * **Automatically**
+
+  NOTE: The automatic feature is only available through the Argo Web UI.
 
   Create and activate a Policy template to trigger this workflow for every commit as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
 

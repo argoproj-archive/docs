@@ -1,6 +1,6 @@
 # Tutorial 2: Build a Docker Image using DinD
 
-This tutorial shows how to easily build Docker images on Kubernetes.
+This tutorial shows how to easily build Docker images on a Kubernetes cluster.
 
 As mentioned Tutorial 1, an Argo Workflow consists of steps and each step runs as a Docker container within a Kubernetes pod. However, sometimes you may need to run a Docker container within a Docker container (such as building a Docker container image inside your containerized CI job). These are the steps you'll run in the sample workflow for building Docker images:
 
@@ -85,7 +85,7 @@ $ argo job show <job_ID>
 
 	For more details about writing the YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
-4.  Integrate your repo with Argo. In Argo Web UI, select **Administration->Integrations->SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
+4.  Integrate your repo with Argo. In Argo Web UI, select **Administration > Integrations > SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
 
 ## Running Your Customized DinD Build Workflow
 
@@ -93,13 +93,28 @@ You have two options for running your customized DinD build workflow:
 
  * **Manually**
 
+ **From Argo CLI**
+
+ You run the same CLI command as shown above except you add two input parameters, `commit` and `repo` and the repo branch flag like this:
+
+  ```
+
+  $ argo job submit example-build-using-dind --argument "parameters.COMMIT=<commit_id>" --argument "parameters.REPO=<url_to_your_repo>" --branch <name_of_branch>
+
+  ```
+
+  (Optional) If you want your  DinD build workflow to show up in your Catalog menu, copy and modify the `dind-project.yaml` file into the `.argo` directory in your repo. This YAML file defines how to add the workflow item to your Catalog.
+
+  **From Argo Web UI**
+
 	1. Go to **Timeline** menu, select a commit and click **Create a New Job**.
 	1. Select the YAML templates to create a job, click **NEXT**, enter values for the input parameters and click **Submit**. You can also run all your YAML templates from the **Templates** menu.
-
-  (Optional) If you want your DinD-build Workflow to show up in your Catalog menu, copy and modify the `dind-project.yaml` file into the `.argo` directory in your repo.
+	1. (Optional) If you want your DinD-build Workflow to show up in your Catalog menu, copy and modify the `dind-project.yaml` file into the `.argo` directory in your repo.
 
 
  * **Automatically**
+
+  NOTE: The automatic feature is only available through the Argo Web UI.
   	1. Add `commit` and `repo` as input parameters to your workflow as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
   	2. Create and activate a Policy template to trigger this workflow for every commit as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
 

@@ -87,12 +87,29 @@ You have two options for deploying your stateful app:
 
  * **Manually**
 
-  Go to **Templates** menu, select your YAML template and click **Create a New Job**.
+ **From Argo CLI**
+
+ You run the same CLI command as shown above except you add two input parameters, `commit` and `repo`, and the repo branch flag like this:
+
+ ```
+
+ $ argo job submit odoo-workflow-with-volumes --argument "parameters.APP_NAME=odoo-with-vols" --argument "parameters.APP_VOL_NAME=odoo" --argument "parameters.DATA_VOL_NAME=postgres" --argument "parameters.PASSWORD=odoo" --argument "parameters.USER=odoo" --repo <yourRepoName> --argument "parameters.COMMIT=<commit_id>" --argument "parameters.REPO=<url_to_your_repo>" --branch <name_of_branch>
+
+ ```
+
+ (Optional)  If you want your app to display in your Catalog menu, just modify the `Project` section in the `odoo-project.yaml` YAML template.
+
+ **From Argo Web UI**
+
+  Go to **Templates** menu, select your YAML template for the deployment workflow, and click **Create a New Job**.
 
    (Optional)  If you want your app to display in your Catalog menu, just modify the `Project` section in the `odoo-project.yaml` YAML template.
 
 
  * **Automatically**
+
+ NOTE: The automatic feature is only available through the Argo Web UI.
+
 	1. Add `commit` and `repo` as input parameters to your workflow as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
 	2. Create and activate a Policy template to trigger this workflow for every commit as shown in [Tutorial 1](./argo_tutorial_1_create_ci_workflow.md).
 

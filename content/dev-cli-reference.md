@@ -28,33 +28,34 @@ You are now ready to use the Argo development CLI commands.
 
 ### Validating Argo YAML Template files
 
-Validating a directory of Argo YAML Template files
 
-```
+* Validating a directory of Argo YAML Template files
+
+ ```
 $ argo yaml validate <name_of_directory_with_YAML_files>
 
-```
-Validating a list of of Argo YAML Template files in a directory
+ ```
+* Validating a list of of Argo YAML Template files in a directory
 
-```
-$ argo yaml validate <filename1> <filename2> <filename3>
+ ```
+ $ argo yaml validate <filename1> <filename2> <filename3>
 
-```
+ ```
 
 ### Submitting a Job
-* **Using a template from a repo branch**
+* Using a template from a branch on a remote repo
 
-```
+ ```
  $ argo job submit <Argo_YAML_template_name> --argument "parameters.<input_parameter>" --branch <name_of_branch> --repo <URL_of_Repository>
 
-```
+ ```
 
-* **Using a local template**
+* Using a local template
 
-```
-$ argo job submit  <Argo_YAML_template_name> --local
+ ```
+ $ argo job submit  <Argo_YAML_template_name> --local
 
-```  
+ ```  
 
 ### Get ID for the Job You Submitted
 
@@ -128,4 +129,4 @@ $ cd .argo
 
 ```
 
-and open the configuration file you want to change.
+and open the configuration file you want and make your changes.
