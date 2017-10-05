@@ -93,12 +93,12 @@ To view a report of the test failure,  go to the specific Job, click **Workflow*
 
 ## Customize Your Selenium Workflow
 1. In your own repo, create a directory called `.argo`. (The Argo Workflow engine uses this directory to look for the YAML files to run for a containerized workflow.)
-1. Copy the YAML templates you ran in the sample workflow from the `.argo` directory in  [https://github.com/argoproj/appstore/](https://github.com/argoproj/appstore/) to the `.argo` folder you just created in your repo.
+1. Copy the YAML templates you ran in the sample Selenium demo workflow from the `.argo` directory in  [https://github.com/argoproj/appstore/](https://github.com/argoproj/appstore/) to the `.argo` folder you just created in your repo.
 1. Customize the `selenium_all_ax.yaml` file by specifying your own app to test or adding more steps.
 
 	For more details about writing the YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
-1. Integrate your repo with Argo. In Argo Web UI, select **Administration->Integrations->SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
+1. Integrate your repo with Argo. In Argo Web UI, select **Administration > Integrations > SCM**. Once integrated, the Argo Web UI will display your source code commits in the **Timeline** menu item.
 
 ## Running Your Customized Selenium Test Workflow
 

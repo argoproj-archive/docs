@@ -1,13 +1,13 @@
 # Tutorial 7: Deploy Microservices-based App
 
-This tutorial shows how to deploy and scale a stateful, microservices-based application ("Sock shop") using an Argo workflow. Sock shop is an open source e-commerce app with fourteen microservices. ([https://microservices-demo.github.io/](https://microservices-demo.github.io/)). Six of the services are stateful services that require a persistent volume. (The Sock shop deployment requires the persistence of the user-generated data and the app files to run.) This example uses an AWS EBS volume to persist the stateful services. This example also deploys Zipkin for tracing the application end-to-end.
+This tutorial shows how to deploy and scale a stateful, microservices-based application ("Sock shop") using an Argo workflow. Sock shop is an open source e-commerce app with fourteen microservices ([https://microservices-demo.github.io/](https://microservices-demo.github.io/)). Six of the services are stateful services that require a persistent volume. (The Sock shop deployment requires the persistence of the user-generated data and the app files to run.) This example uses an AWS EBS volume to persist the stateful services and also deploys Zipkin for tracing the application end-to-end.
 
 ## Prerequisites
 
   This tutorial assumes the following:
 
   * You have successfully [installed Argo](https://argoproj.github.io/argo-site/get-started/installation).
-  * You have integrated Argo with Appstore containing Sock shop microservices-based application [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo)
+  * You have integrated Argo with the repo that contains the Sock shop, microservices-based, application [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo)
   * You have [created an AWS RDS database instance of type "PostgreSQL"](http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.PostgreSQL.html). Make sure you've taken all default parameters and that Argo can access the database endpoint.
   * (CLI only) You have logged into the Argo command line. To do this, go to your terminal, cd to the directory for the Argo install, and enter the following information at the command-line prompt:
     * `$ argo login`
@@ -21,7 +21,7 @@ This tutorial shows how to deploy and scale a stateful, microservices-based appl
 
 ## About the YAML Files
 
-The Sock shop workflow uses 1 top-level YAML files from the `.argo` directory of the repo at [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo):
+The Sock shop workflow uses 1 top-level YAML file from the `.argo` directory of the repo at [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo):
 
 * `sock-shop-workflow.yaml` - This file defines a workflow that has fourteen deployment templates for deploying sock shop and three deployment templates to deploy Zipkin. These are YAML templates you'll run for the microservices-demo:ß
  - `carts-db` - deploys the mongoDB database that handles the shopping carts. (Uses named volume to store shopping cart data.)
@@ -42,7 +42,7 @@ The Sock shop workflow uses 1 top-level YAML files from the `.argo` directory of
  - `zipkin` - deploys Zipkin app.
  - `zipkin-cron` - deploys Zipkin to run as a cron job.
 
-Argo deployment YAML files internally map to Kubernetes deployment and service YAML files.
+NOTE: Argo deployment YAML files internally map to Kubernetes deployment and service YAML files.
 
 For more details on the Argo YAML DSL, see [Argo YAML DSL Reference](./../yaml/dsl_reference_intro.md).
 
@@ -112,8 +112,8 @@ If you stop or terminate the application and redeploy you can see that the data 
 
 ### Create your YAML files
 
-1.  Create an .argo folder under your repository.
-2.  Copy `sock-shop-with-rds.yaml` from [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo) to your repo's `.argo` folder. Customize it with your deployment and container specs
+1.  Create an `.argo` folder under your repository.
+2.  Copy `sock-shop-with-rds.yaml` from [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo) to your repo's `.argo` folder. Customize it with your deployment and container specs.
 3.  Create volumes through YAML or using the Argo Web UI.
 4.  (Optional) If you want Sock shop to show up in your Catalog, copy the `microservices-project.yaml` from [https://github.com/argoproj/microservices-demo](https://github.com/argoproj/microservices-demo) to your repo's `.argo` folder. This YAML file defines how the app shows up in your Catalog menu. You can see and run all your YAML-based workflows from **Templates** menu in the Argo Web UI.
 4.  Integrate your repo with Argo. In Argo Web UI, select **Administration** > **Integrations** > **SCM**. Once integrated, the Argo Web UI displays your source code commits in the **Timeline** menu item.

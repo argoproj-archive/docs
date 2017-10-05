@@ -70,7 +70,7 @@ NOTE: When you created your Argo, by default the Cluster provides a self-signed 
 
 To remove the private key, press **DELETE**.
 
-## To enable or disable spot instances for a cluster:
+##  <a id="enable-spot-instances"></a>Enabling Spot Instances for a Kubernetes Cluster:
 
 1. Click **Navigation bar** >  **Administration** > **Settings** > **System Settings**.
 2. Under **SPOT INSTANCE CONFIGURATION**, toggle Spot Instances to enable or disable spot instances for your cluster.
