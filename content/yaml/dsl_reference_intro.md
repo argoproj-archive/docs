@@ -12,7 +12,7 @@ Argo’s YAML Domain Specific Language (DSL) describes the specification to writ
 
 The automation of the public cloud infrastructure is driven by YAML templates that are written in the Argo Domain Specific Language. (DSL). You write YAML templates for specifying workflows, deployments, and applications that run on Argo. The specifications in the YAML templates are treated like code and are hosted in source code management (SCM) systems with your application code.
 
-Argo also provides a syntax and consistency checkers to validate the YAML definitions. The checkers are available for Linux, Apple MacOS, and Microsoft Windows operating systems and they can be downloaded directly from the Argo Console.
+Argo also provides a syntax-and-consistency checker to validate the YAML DSL definitions. The checkers are available from the Argo Developer CLI for Linux and Apple MacOS operating systems. Download this CLI from the Argo Web UI (**Navigation** > **Administration** > **Docs** > **Argo CLI**) or from the [Argo Install page](https://argoproj.github.io/argo-site/get-started/installation).
 
 The Argo DSL provides six types of YAML templates:
 
