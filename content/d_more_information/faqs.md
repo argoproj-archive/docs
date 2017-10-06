@@ -4,7 +4,7 @@
 
 **Q.** When my test fails, I can't don't see any failure messages in my logs.
 
-**A.** You need to identify where in the process of running a job the failure occurred. From the **Timeline** >  **Jobs** view of the Argo Web UI, look for the left-most container or workflow that has a red circle. This indicates the part of the process that failed. For example, if the deployment step shows a red circle and there are no error messages in that log, this means the failure occurred earlier in the process. In this case, you could check an earlier step, such as the workflow logs to see what part of the YAML code failed.
+**A.** You need to identify where in the process of running a job the failure occurred. From the **Timeline** > **Jobs** view of the Argo Web UI, look for the left-most container or workflow that has a red circle. This indicates the part of the process that failed. For example, if the deployment step shows a red circle and there are no error messages in that log, this means the failure occurred earlier in the process. In this case, you could check an earlier step, such as the workflow logs to see what part of the YAML code failed.
 
 **Q.** My YAML code failed on one of the parameters.
 

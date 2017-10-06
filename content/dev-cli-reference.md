@@ -4,7 +4,7 @@ Use these commands to execute the common tasks of running workflows and applicat
 
 NOTE: If you want to access the REST-based APIs for the SDK, add `/swagger` at the end of the URL for your Kubernetes cluster. For example, suppose the cluster URL is `https://sampleapp.com`. You would append the URL like this: `https://sampleapp.com/swagger`.
 
-### Log into Argo
+## Log into Argo
 
 ```
 
@@ -26,7 +26,7 @@ Config written to: <path_to_config>
 ```
 You are now ready to use the Argo development CLI commands.
 
-### Validating Argo YAML Template files
+## Validating Argo YAML Template files
 
 
 * Validating a directory of Argo YAML Template files
@@ -42,7 +42,7 @@ $ argo yaml validate <name_of_directory_with_YAML_files>
 
  ```
 
-### Submitting a Job
+## Submitting a Job
 * Using a template from a branch on a remote repo
 
  ```
@@ -57,7 +57,7 @@ $ argo yaml validate <name_of_directory_with_YAML_files>
 
  ```  
 
-### Get ID for the Job You Submitted
+## Get ID for the Job You Submitted
 
 ```
 
@@ -65,7 +65,7 @@ $ argo job list --submitter <user_name>
 
 ```
 
-### Get a list of all jobs running on Argo
+## Get a list of all jobs running on Argo
 
 ```
 
@@ -73,14 +73,14 @@ $ argo job list --show-all
 
 ```
 
-### Show status of a Job
+## Show status of a Job
 
 ```
 $ argo job show <job_ID>
 
 ```
 
-### Show status of a workflow
+## Show status of a workflow
 
 ```
 
@@ -88,41 +88,41 @@ $ argo job show <job_ID> --tree
 
 ```
 
-### Terminating a Job
+## Terminating a Job
 
 ```
 $ argo job kill <job_ID>
 
 ```  
 
-### View the apps running on Argo and their status
+## View the apps running on Argo and their status
 
 ```
 $ argo app list
 
 ```
 
-### View the details for an app
+## View the details for an app
 
 ```
 $ argo app show <name_of_app>
 
 ```
 
-### View username/password/URL for Argo
+## View username/password/URL for Argo
 
 ```
 $ argo config show
 
 ```
-### View logs
+## View logs
 
 ```
 $ argo job logs <job_ID>
 
 ```
 
-### Changing configuration settings for Argo
+## Changing configuration settings for Argo
 
 ```
 $ cd .argo
