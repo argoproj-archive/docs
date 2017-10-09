@@ -1,6 +1,6 @@
 # Cluster
 
-This view shows real-time details about the instances /hosts that are running jobs in your Argo cluster.
+This view shows real-time details about the instances and hosts that are running jobs in your Kubernetes cluster.
 
 Go to **Navigation bar** > **Monitoring** > **Cluster** to view the following information:
 

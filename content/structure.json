@@ -202,9 +202,9 @@
               "path": "user_guide/dashboards/cashboard.md"
             },
             {
-              "title": "Hosts",
-              "summary": "Real-time data for instances and hosts running jobs on Argo",
-              "details": "Real-time details about the instances /hosts with running jobs in the Argo cluster, memory allocated to the instance and the percentage of utilization",
+              "title": "Cluster",
+              "summary": "Real-time data for instances, hosts running jobs on Kubernetes",
+              "details": "Real-time details about the instances, hosts running jobs in a Kubernetes cluster with Argo, memory allocated to the instance and the percentage of utilization",
               "path": "user_guide/dashboards/hosts.md"
             },
             {

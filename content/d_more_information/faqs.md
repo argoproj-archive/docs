@@ -10,6 +10,13 @@
 
 **A.** Your YAML code was grabbing something that wasn't created. Argo has YAML checker to verify that the YAML code is valid. The checkers are available from the Argo Developer CLI for Linux and Apple MacOS operating systems. Download this CLI from the Argo Web UI (**Navigation** > **Administration** > **Docs** > **Argo CLI**) or from the [Argo Install page](https://argoproj.github.io/argo-site/get-started/installation).
 
+<!--10-9-17 cy per MK  Content from using_the_yaml_dsl.md file that was removed because developers are assumed to know this already)
+To access all of the YAML files that the tutorials use for running on Argo, check.
+
+IMPORTANT: There are two things to remember about the YAML templates:
+1.  The names of the YAML templates are case-sensitive. If you are running a job from the Argo command line (CLI), please check that the name of the workflow template in the command-line matches exactly the name of the template itself.
+2. If the name of the YAML template contains a space, you must enclose the name in ASCII double quotes (for example, "MLB app").
+-->
 ## Artifacts
 
 **Q.** How does Argo manage artifacts that are produced by a job?
