@@ -6,6 +6,8 @@ NOTE: If you want to access the REST-based APIs for the SDK, add `/swagger` at t
 
 ## Log into Argo
 
+IMPORTANT: Before you can log into Argo, you must [install the Argo CLI](https://argoproj.github.io/argo-site/get-started/installation). After you have completed this task, return to the command line and enter this command:
+
 ```
 
 $ ./argo login
