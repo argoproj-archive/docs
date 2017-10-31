@@ -57,6 +57,29 @@
       "details": "Instructions for configuring and using container native workflows for Kubernetes- Administration, infrastructure management, CI/CD, app deployment",
       "children": [
         {
+          "title": "Install Options for Argo",
+          "children": [
+            {
+              "title": "Installing Argo on AWS",
+              "summary": "Installing Argo on Kubernetes Cluster in AWS",
+              "details": "Install Argo on existing Kubernetes cluster running in Amazon Web Services (AWS) using S3 bucket to store Argo data",
+              "path": "user_guide/install_argo_custom_k8s_cluster/install_argo_k8s_cluster_AWS"
+            },
+            {
+              "title": "Installing Argo on GKE",
+              "summary": "Installing Argo on Kubernetes Cluster in GKE",
+              "details": "Install Argo on existing Kubernetes cluster running in Google Container Engine (GKE) using S3 bucket to store Argo data",
+              "path": "user_guide/install_argo_custom_k8s_cluster/install_argo_k8s_cluster_GKE"
+            },
+            {
+              "title": "Installing Argo on Minikube",
+              "summary": "Installing Argo on Kubernetes Cluster in Minikube",
+              "details": "Install Argo on existing Kubernetes cluster running in Minikube using local storage or S3 bucket to store Argo data",
+              "path": "user_guide/install_argo_custom_k8s_cluster/install_argo_k8s_cluster_Minikube"
+            }
+          ]
+        },
+        {
           "title": "Configuring Argo",
           "summary": "Configure Argo to run workflows, deploy apps on Kubernetes",
           "details": "Configure Argo to run workflows, deploy container-native apps on Kubernetes, monitor cost usage and hosts",

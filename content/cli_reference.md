@@ -18,35 +18,33 @@ After you enter this command, the prompt displays `argo cluster ops>` which mean
 ## <a name="InstallCmdOptions"></a>Install
 
 * Installs Argo on a brand new Kubernetes cluster in AWS based on given configurations.
-<!--from Harry; After the cluster is installed, Argo generates an initial access credential and creates an Argo CLI configuration file, which is named as "<cluster-name>-<cluster-id>".-->
-
- ```
-
- > argocluster install --cluster-name <yourClusterName>
-
- ```
-
-* Installs Argo on an existing Kubernetes cluster in AWS.
-
- ```
-
- > argocluster install-argo-only --cloud-provider aws --cluster-name <name_of_cluster> --cloud-profile <name_of_profile> --cluster-bucket <name_of_S3_bucket> --kubeconfig <path_to_kubernetes_config_file>
-
- ```
-* Installs Argo on an existing Kubernetes cluster in minikube (using a local volume for storing data).
-
- ```
-
- > argocluster install-argo-only --cloud-provider minikube --cluster-name <name_of_cluster> --kubeconfig <path_to_kubernetes_config_file>
-
- ```
-
- * Installs Argo on an existing Kubernetes cluster in minikube (using a shared volume for storing data).
 
   ```
 
-  > argocluster install-argo-only --cloud-provider minikube --cluster-name my-minikube --kubeconfig /tmp/ax_kube/cluster_shri-mini.conf --access-key MY_ACCESS_KEY --secret-key MY_SECRET_KEY --bucket-endpoint https://storage.googleapis.com --cluster-bucket MY_BUCKET
+  > argocluster install --cluster-name <yourClusterName>
 
+  ```
+
+* Installs Argo on an existing Kubernetes cluster in AWS.
+
+  ```
+
+  > argocluster install-argo-only --cloud-provider aws --cluster-name <name_of_cluster> --cloud-profile <name_of_profile> --cluster-bucket <name_of_S3_bucket> --kubeconfig <path_to_kubernetes_config_file>
+
+  ```
+
+* Installs Argo on an existing Kubernetes cluster in minikube (using a local volume for storing data).
+
+  ```
+
+  > argocluster install-argo-only --cloud-provider minikube --cluster-name <name_of_cluster> --kubeconfig <path_to_kubernetes_config_file>
+
+  ```
+
+* Installs Argo on an existing Kubernetes cluster in minikube (using a shared volume for storing data).
+
+  ```
+  > argocluster install-argo-only --cloud-provider minikube --cluster-name my-minikube --kubeconfig /tmp/ax_kube/<name _of_kubeconfig_file> --access-key <MY_ACCESS_KEY> --secret-key <MY_SECRET_KEY> --bucket-endpoint https://storage.googleapis.com --cluster-bucket <MY_BUCKET>
 
   ```
 
@@ -105,3 +103,5 @@ Restarts a Kubernetes cluster.
 > argocluster restart --cluster-name <yourClusterName>
 
 ```
+
+<!--per Harry; After the cluster is installed, Argo generates an initial access credential and creates an Argo CLI configuration file, which is named as "<cluster-name>-<cluster-id>".-->

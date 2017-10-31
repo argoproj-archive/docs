@@ -61,6 +61,67 @@ external_routes:
     visibility: organization
 ```
 
+<!--EDIT THIS TOPIC 10-27-17
+### Setting up External Routes on AWS
+
+If you specify an external route, Argo creates an [ingress controller](https://kubernetes.io/docs/concepts/services-networking/ingress/#ingress-controllers)
+and ingress rules that point to deployments. In the following example, `myserver.example.com` points to the nginx deployment:
+
+```
+external_routes:
+  - dns_prefix: myserver
+    dns_domain: example.com
+    target_port: 80
+containers:
+  WEB:
+    image: nginx:latest
+
+```
+
+NOTE: If the `dns_domain` is not specified, then you must set the default domain in the Argo Web UI. For instructions see [Configure Domains for App Access](/../../user_guide/configapplatixcluster/managedomains.md).
+
+You create an nginx ingress controller using a deployment that is listening on ports 80 and 443. You can create a LoadBalancer service for this using the following command:
+
+```
+
+kubectl --namespace=axsys create -f - <<EOF
+apiVersion: v1
+kind: Service
+metadata:
+  name: ingress-controller-service
+  namespace: axsys
+spec:
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+  - name: https
+    port: 443
+    protocol: TCP
+  selector:
+    app: ingress-controller-deployment
+  type: LoadBalancer
+EOF
+
+```
+
+Now you can add Amazon Route 53 entries (or a similar DNS management service) that points to the ELB created for this load balancer. Each `dns_prefix.dns_domain` entry should point to the load balancer. In YAML example above, `myserver.example.com` should point to this load balancer. You manage the IP's that have access to your deployments through load balancer or by using ingress whitelist (specified in the external route as a CIDR range in the external_routes section.
+
+```
+
+external_routes:
+  - dns_prefix: myserver
+    dns_domain: example.com
+    target_port: 80
+    ip_white_list:
+    - 35.34.0.0/16
+containers:
+  WEB:
+    image: nginx:latest
+
+```
+-->
+
 #### internal_routes
 
 Internal Route is the route for deployment to be exposed within the cluster.
