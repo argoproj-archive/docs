@@ -169,9 +169,9 @@ This is the environment configuration for installing Argo on an existing Kuberne
  ```
 
  Where:
- * `--cluster-bucket` is the S3 bucket that stores the Argo metadata (configs) and artifacts. The bucket must be provisioned before you install Argo and be located in the same region as the Kubernetes cluster.
- * `--cluster-name` is the name of your cluster.
- * `--kube-config` is the Kubernetes configuration file from your existing cluster.
+  * `--cluster-bucket` is the S3 bucket that stores the Argo metadata (configs) and artifacts. The bucket must be provisioned before you install Argo and be located in the same region as the Kubernetes cluster.
+  * `--cluster-name` is the name of your cluster.
+  * `--kube-config` is the Kubernetes configuration file from your existing cluster.
 
 Once the installation completes, you will get the URL for Argo Web UI, an admin Uid and password to run Argo workflows.
 
