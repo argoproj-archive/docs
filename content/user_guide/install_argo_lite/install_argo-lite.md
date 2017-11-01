@@ -115,5 +115,3 @@ You can run sample workflows on Argo Lite by cloning them from the Argo repo and
 * Selenium test workflow ([repo](https://github.com/argoproj/appstore)): `argo job submit 'Selenium Demo' --config argo-lite-kube --local`
 * Docker In Docker usage example ([repo](https://github.com/argoproj/example-dind)): `argo job submit 'example-build-using-dind' --config argo-lite-kube --local`
 * Argo-lite build workflow ([repo](https://github.com/argoproj/argo)): `argo job submit 'Argo Lite CI' --config argo-lite-kube --local`
-
-![alt text](./demo.gif "Logo Title Text 1")
