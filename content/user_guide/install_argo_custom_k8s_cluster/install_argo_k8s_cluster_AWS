@@ -164,7 +164,7 @@ This is the environment configuration for installing Argo on an existing Kuberne
 
  ```
 
- > argocluster install-argo-only --cloud-provider aws --cluster-name <name_of_kubernetes_cluster> --cloud-profile <aws_profile_name> --cluster-bucket <name_of_S3_bucket> --kubeconfig /tmp/ax_kube/<name_of_kubeconfig_file>
+ > argocluster install-argo-only --cloud-provider aws --cluster-name <name_of_kubernetes_cluster> --cloud-profile <aws_profile_name>  --cloud-region <aws_cloud_region> --cluster-bucket <name_of_S3_bucket> --kubeconfig /tmp/ax_kube/<name_of_kubeconfig_file>
 
  ```
 

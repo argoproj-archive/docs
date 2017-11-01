@@ -4,7 +4,7 @@ Use these commands to execute the common tasks of running workflows and applicat
 
 ## Log into Argo
 
-IMPORTANT: Before you can log into Argo, you must install the Argo CLI with this command:
+IMPORTANT: Before you can log into Argo, you must install the Argo CLI with a curl command:
 
 * For Mac
 
@@ -149,6 +149,6 @@ $ cd .argo
 
 and open the configuration file you want and make your changes.
 
-## REST APIs for the Argo SDK
+##  Dev REST APIs
 
-NOTE: If you want to access the REST-based APIs for the SDK, add `/swagger` at the end of the URL for your Kubernetes cluster. For example, suppose the cluster URL is `https://sampleapp.com`. You would append the URL like this: `https://sampleapp.com/swagger`.
+If you want to access the REST-based APIs for the Argo SDK, add `/swagger` at the end of the URL for your Kubernetes cluster. For example, suppose the cluster URL is `https://sampleapp.com`. You would append the URL like this: `https://sampleapp.com/swagger`.

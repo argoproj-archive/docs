@@ -1,6 +1,6 @@
-# CLI to Manage Kubernetes Cluster from Argo
+# Cluster CLI
 
-NOTE: The basic CLI commands for managing a Kubernetes cluster from Argo ("Cluster CLI") are listed below. Each Cluster CLI command also has options you can specify. For details about these options, check out the Cluster CLI's  online help.
+The Argo CLI also lets you manage the Kubernetes Cluster. Referred to as the "Cluster CLI", it is the same as the Dev CLI except that the command parameters are different. Each Cluster CLI command also has options you can specify. For details about these options, check out the Cluster CLI's online help.
 
 
 ## Launch shell for managing Kubernetes Cluster from Argo
