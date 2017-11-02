@@ -60,22 +60,16 @@
           "title": "Install Options for Argo",
           "children": [
             {
-              "title": "Installing Argo on AWS",
-              "summary": "Installing Argo on Kubernetes Cluster in AWS",
-              "details": "Install Argo on existing Kubernetes cluster running in Amazon Web Services (AWS) using S3 bucket to store Argo data",
-              "path": "user_guide/install_argo_custom_k8s_cluster/install_argo_k8s_cluster_AWS.md"
+              "title": "Installing Argo on AWS, GKE, or Minikube",
+              "summary": "Install Argo on Kubernetes Cluster in AWS, GKE, or Minikube",
+              "details": "Install Argo on existing Kubernetes cluster running in Amazon Web Services (AWS), Google Container Engine (GKE) or Minikube",
+              "path": "user_guide/install_argo_custom_k8s_cluster/install_argo_k8s_cluster_AWS_GKE_Minikube.md"
             },
             {
-              "title": "Installing Argo on GKE",
-              "summary": "Installing Argo on Kubernetes Cluster in GKE",
-              "details": "Install Argo on existing Kubernetes cluster running in Google Container Engine (GKE) using S3 bucket to store Argo data",
-              "path": "user_guide/install_argo_custom_k8s_cluster/install_argo_k8s_cluster_GKE.md"
-            },
-            {
-              "title": "Installing Argo on Minikube",
-              "summary": "Installing Argo on Kubernetes Cluster in Minikube",
-              "details": "Install Argo on existing Kubernetes cluster running in Minikube using local storage or S3 bucket to store Argo data",
-              "path": "user_guide/install_argo_custom_k8s_cluster/install_argo_k8s_cluster_Minikube.md"
+              "title": "Installing Argo Lite",
+              "summary": "Installing Argo Lite on Kubernetes Cluster",
+              "details": "Install Argo Lite on Kubernetes cluster, Docker, or Minikube, using helm charts or manually",
+              "path": "user_guide/install_argo_lite/install_argo-lite.md"
             }
           ]
         },

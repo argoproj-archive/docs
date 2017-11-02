@@ -69,13 +69,16 @@ You must configure your GKE environment for these minimum resource requirements 
 
 1. Run the following command to install Argo:
 
+
    ```
 
    > argocluster install-argo-only --cloud-provider gke --cluster-name <my-gke-cluster-name> --kubeconfig /tmp/ax_kube/<name_of_argo-gke-config> --cluster-bucket <MY_BUCKET_NAME> --bucket-endpoint https://storage.googleapis.com --access-key <MY_ACCESS_KEY> --secret-key <MY_SECRET_KEY>
 
    ```
-   
-   Where `<name_of_argo-gke-config>` is the output of running the preprocessing script in step 4.
+
+
+
+Where `<name_of_argo-gke-config>` is the output of running the preprocessing script in step 4.
 
    NOTE: If you have not generated the Google access key or the secret key, log into the Google Cloud platform and navigate to **Storage** > **Settings** > **Interoperability** and click `Create a new key`.
 
