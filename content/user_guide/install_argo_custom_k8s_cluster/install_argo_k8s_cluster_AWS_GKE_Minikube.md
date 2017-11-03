@@ -123,7 +123,7 @@ You must configure your AWS environment for these minimum resource requirements:
 * Minimum of two (2) m3.large minion nodes
 * Kubernetes version 1.6 and above
 * One S3 bucket in same region (NOTE: You must provision the bucket before you install Argo. The bucket stores the metadata and artifacts that an Argo workflow generates.)
-* IAM role permissions as defined in [here](../a_introduction_topics/AWS_IAM_Minion_role.md).
+* IAM role permissions as defined in [here](../../a_introduction_topics/AWS_IAM_Minion_role.md).
 * Access to the `kubeconfig` file for the cluster
 
   NOTE: If you do not have this file, enter the following command to export the kubeconfig of your existing cluster:
