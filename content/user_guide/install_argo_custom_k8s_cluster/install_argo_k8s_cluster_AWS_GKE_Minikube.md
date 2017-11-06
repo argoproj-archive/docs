@@ -98,7 +98,7 @@ You must configure your GKE environment for these minimum resource requirements 
    $ curl https://raw.githubusercontent.com/argoproj/argo/master/argo_preprocess_kubeconfig.sh -o /tmp/argo_preprocess_kubeconfig.sh
    $ chmod ugo+x /tmp/argo_preprocess_kubeconfig.sh
    $ /tmp/argo_preprocess_kubeconfig.sh ~/.kube/config ~/.kube/argo-gke-config
-         ```
+   ```
    NOTE: The preprocessing script is required because the installer runs in a Docker container, which does not have sufficient access to the normal gcloud authentication schemes that are available in the host environment.
 
 1. Enter the following command line to install Argo on the Kubernetes cluster:
