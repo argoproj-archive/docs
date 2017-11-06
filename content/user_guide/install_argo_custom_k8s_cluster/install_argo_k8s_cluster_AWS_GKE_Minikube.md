@@ -62,7 +62,6 @@ You must configure your Minikube environment for these minimum resource requirem
     ```
     $ argo cluster
     argo cluster ops> argocluster install-argo-only --cloud-provider minikube --cluster-name <name_of_kubernetes_cluster> --kubeconfig /tmp/ax_kube/<name_of_kubeconfig_file>
-
       ```
     **Using External Storage**
 
@@ -71,13 +70,11 @@ You must configure your Minikube environment for these minimum resource requirem
     ```
     $ argo cluster
     argo cluster ops> argocluster install-argo-only --cloud-provider minikube --cluster-name <name_of_kubernetes_cluster> --kubeconfig /tmp/ax_kube/<name_of_kubeconfig_file> --access-key <my_access_key> --secret-key <my_secret_key> --bucket-endpoint https://storage.googleapis.com --cluster-bucket <my_bucket_name>
-
     ```
 6. After the installation completes, launch the Argo Web UI by running this command:
 
     ```
     $ minikube service -n axsys axops
-
     ```
 
 # GKE
@@ -140,7 +137,6 @@ Enter the following command line to install Argo on the Kubernetes cluster:
  ```
  $ argo cluster
  argo cluster ops> argocluster install-argo-only --cloud-provider aws --cluster-name <name_of_kubernetes_cluster> --cloud-profile <aws_profile_name>  --cloud-region <aws_cloud_region> --cluster-bucket <name_of_S3_bucket> --kubeconfig /tmp/ax_kube/<name_of_kubeconfig_file>
-
  ```
 
 ## Installing Argo and Kubernetes cluster on AWS
@@ -150,7 +146,6 @@ Enter the following command line to install Argo on a new Kubernetes cluster:
  ```
  $ argo cluster
  argo cluster ops> argocluster install
-
  ```
 
 #### Argo is now installed. You now have the URL for Argo Web UI, an admin Uid and password to run Argo workflows.
@@ -160,21 +155,17 @@ Enter the following command line to install Argo on a new Kubernetes cluster:
 2. Enter this command to log into Argo from the CLI:
 
   ```
-
   $ ./argo login
-
   ```
 
 3. Enter the appropriate value for each interactive prompt:
 
   ```
-
   Enter a configuration name (default):
   Enter cluster URL: <cluster_URL>
   Enter cluster username: <email_address_of_cluster_user>
   Enter cluster password: <password>
   Config written to: <path_to_config>
-
   ```
 
 # Run the Sample Workflows
@@ -191,14 +182,10 @@ Enter the following command line to install Argo on a new Kubernetes cluster:
 On existing Kubernetes cluster on AWS, GKE, or Minikube
 
 ```
-
  argo cluster ops> argocluster uninstall-argo-only --kubeconfig /tmp/ax_kube/name_of_kube-config_for_argo_on_Minikube>
-
 ```
 On new Kubernetes cluster on AWS
 
 ```
-
  argo cluster ops> argocluster uninstall
-
 ```
