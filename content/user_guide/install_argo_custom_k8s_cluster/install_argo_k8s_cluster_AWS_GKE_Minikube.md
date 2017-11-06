@@ -152,13 +152,13 @@ Enter the following command line to install Argo on a new Kubernetes cluster:
 
 # Log into Argo
 
-2. Enter this command to log into Argo from the CLI:
+1. Enter this command to log into Argo from the CLI:
 
   ```
   $ ./argo login
   ```
 
-3. Enter the appropriate value for each interactive prompt:
+2. Enter the appropriate value for each interactive prompt:
 
   ```
   Enter a configuration name (default):
