@@ -102,9 +102,9 @@ You must configure your GKE environment for these minimum resource requirements 
 
    ```
    $ argo cluster
-   argo cluster ops> argocluster install-argo-only --cloud-provider gke --cluster-name <my-gke-cluster-name> --kubeconfig /tmp/ax_kube/<name_of_argo-gke-config> --cluster-bucket <MY_BUCKET_NAME> --bucket-endpoint https://storage.googleapis.com --access-key <MY_ACCESS_KEY> --secret-key <MY_SECRET_KEY>
+   argo cluster ops> argocluster install-argo-only --cloud-provider gke --cluster-name <my-gke-cluster-name> --kubeconfig /tmp/ax_kube/argo-gke-config --cluster-bucket <MY_BUCKET_NAME> --bucket-endpoint https://storage.googleapis.com --access-key <MY_ACCESS_KEY> --secret-key <MY_SECRET_KEY>
    ```
-   Where `<name_of_argo-gke-config>` is the output of running the preprocessing script in step 1.
+   Where `argo-gke-config` is the output of running the preprocessing script in step 1.
 
    NOTE: If you have not generated the Google access key or the secret key, log into the Google Cloud platform and navigate to **Storage** > **Settings** > **Interoperability** and click `Create a new key`.
 
