@@ -15,6 +15,9 @@ The process for installing Argo is:
 
 ## Prerequisite
 
+Docker Community Edition must be installed from [here] (https://www.docker.com/community-edition)
+
+
 The Argo CLI must be installed to install Argo on any cluster. Here is the command to install Argo CLI:
 
   * For Mac
@@ -119,8 +122,8 @@ You must configure your AWS environment for these minimum resource requirements:
 * Minimum of two (2) m3.large minion nodes
 * Kubernetes version 1.6 and above
 * One S3 bucket in same region (NOTE: You must provision the bucket before you install Argo. The bucket stores the metadata and artifacts that an Argo workflow generates.)
-* Additional [AWS resources](../../a_introduction_topics/Min_Req_AWS_Resources_4_Argo.md) that Argo requires
-* IAM role permissions as defined [here](../../a_introduction_topics/AWS_IAM_Minion_role.md).
+* Installed [AWS Command-Line Interface (CLI)](https://aws.amazon.com/documentation/cli/) on your system.
+* Created and configured at least one [AWS Named Profile](http://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html).
 * Access to the `kubeconfig` file for the cluster
 
   NOTE: If you do not have this file, enter the following command to export the kubeconfig of your existing cluster:
@@ -140,6 +143,10 @@ Enter the following command line to install Argo on the Kubernetes cluster:
  ```
 
 ## Installing Argo and Kubernetes cluster on AWS
+
+* Additional [AWS resources](../../a_introduction_topics/Min_Req_AWS_Resources_4_Argo.md) that Argo requires for full Kubernetes cluster installation
+* IAM role permissions as defined [here](../../a_introduction_topics/AWS_IAM_Minion_role.md).
+
 
 Enter the following command line to install Argo on a new Kubernetes cluster:
 
