@@ -95,7 +95,7 @@ You must configure your GKE environment for these minimum resource requirements 
 1. Enter the following command to run a preprocessing script against the kube configuration file:
 
    ```
-   $ curl https://raw.githubusercontent.com/argoproj/argo/master/argo_preprocess_kubeconfig.sh -o /tmp/argo_preprocess_kubeconfig.sh
+   $ curl https://raw.githubusercontent.com/argoproj/argo/1.1/argo_preprocess_kubeconfig.sh -o /tmp/argo_preprocess_kubeconfig.sh
    $ chmod ugo+x /tmp/argo_preprocess_kubeconfig.sh
    $ /tmp/argo_preprocess_kubeconfig.sh ~/.kube/config ~/.kube/argo-gke-config
    ```
