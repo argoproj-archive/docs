@@ -22,9 +22,9 @@ Docker-in-Docker works by running a Docker daemon inside a Docker container. The
 
 To know more about **Dind Container** visit https://hub.docker.com/_/docker/
 
-In this example we create a **Sidecar Dind container** that starts the Docker REST service on port 2375.
+In this example we create a **Sidecar Dind container** that starts the Docker REST service on default port 2375.
 
-Setting the DOCKER_HOST to 127.0.0.1:2375 ensures that the Docker client in the main container (user workflow step) points to this Dind Docker daemon.
+Setting the DOCKER_HOST to 127.0.0.1 ensures that the Docker client in the main container (user workflow step) points to this Dind Docker daemon.
 
 
 ## Run Argo Sample Dind Workflow
