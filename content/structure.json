@@ -1,5 +1,22 @@
 {
-  "children": [
-
-  ]
+  "children": [{
+    "title": "Examples",
+    "path": "examples.md",
+    "children": [{
+        "title": "Continuous Integration",
+        "path": "argo_v2_example_ci_workflow.md"
+    }, {
+        "title": "Continuous Delivery",
+        "path": "argo_v2_example_cd_workflow.md"
+    }, {
+        "title": "Docker in Docker",
+        "path": "argo_v2_example_dind_workflow.md"
+    }, {
+        "title": "Machine Learning",
+        "path": "argo_v2_example_ml_workflow.md"
+    }]
+  }, {
+    "title": "YAML DSL",
+    "path": "argo_v2_yaml.md"
+  }]
 }

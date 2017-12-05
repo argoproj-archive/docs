@@ -14,7 +14,7 @@ This example **Deepdream demo**  shows you how to run a container-native, ML pip
 This tutorial assumes the following:
 
 * You have set your Kubernetes context to the correct cluster
-* You have successfully [installed Argo on Kubernetes](https://argoproj.github.io/argo-site/get-started/installation)
+* You have successfully [installed Argo on Kubernetes](https://applatix.com/open-source/argo/get-started/installation)
 * You have configured Argo ConfigMap to use Google Storage/AWS S3/Minio as Artifact Repository
 * You have installed Argo CLI
 

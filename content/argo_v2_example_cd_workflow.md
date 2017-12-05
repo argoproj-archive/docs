@@ -9,7 +9,7 @@ The microservices based app used in this example is open source [Sock Shop](http
 This tutorial assumes the following:
 
 * You have set your Kubernetes context to the correct cluster
-* You have successfully [installed Argo on Kubernetes](https://argoproj.github.io/argo-site/get-started/installation)
+* You have successfully [installed Argo on Kubernetes](https://applatix.com/open-source/argo/get-started/installation)
 * You have installed Argo CLI
 
 

@@ -10,7 +10,7 @@ If you want to do Docker build in container native CI pipeline, you will need to
 ## Prerequisites
 This example assumes the following:
 
-* You have successfully [installed Argo on Kubernetes](https://argoproj.github.io/argo-site/get-started/installation).
+* You have successfully [installed Argo on Kubernetes](https://applatix.com/open-source/argo/get-started/installation).
 * You have set your Kubernetes context to the correct cluster
 
 

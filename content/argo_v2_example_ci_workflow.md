@@ -9,7 +9,7 @@ This example shows you how to run a container-native, CI pipeline on Kubernetes 
 ## Prerequisites
 This example assumes the following:
 
-* You have successfully [installed Argo](https://argoproj.github.io/argo-site/get-started/installation).
+* You have successfully [installed Argo](https://applatix.com/open-source/argo/get-started/installation).
 * You have set you Kubernetes context to the correct cluster
 
 
